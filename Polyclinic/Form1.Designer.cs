@@ -1,6 +1,6 @@
 ﻿namespace Polyclinic
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -64,13 +64,13 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.поликлиникаDataSet = new Polyclinic.ПоликлиникаDataSet();
             this.поликлиникаDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.поликлиникаDataSet = new Polyclinic.ПоликлиникаDataSet();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -99,11 +99,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.48052F));
             this.tableLayoutPanel2.Controls.Add(this.treeView1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 29);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 28);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(770, 394);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(770, 395);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // treeView1
@@ -147,42 +147,41 @@
             treeNode16.Text = "Таблицы";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode16});
-            this.treeView1.Size = new System.Drawing.Size(151, 388);
+            this.treeView1.Size = new System.Drawing.Size(151, 389);
             this.treeView1.TabIndex = 0;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.поликлиникаDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(160, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(607, 388);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // поликлиникаDataSet
-            // 
-            this.поликлиникаDataSet.DataSetName = "ПоликлиникаDataSet";
-            this.поликлиникаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // поликлиникаDataSetBindingSource
             // 
             this.поликлиникаDataSetBindingSource.DataSource = this.поликлиникаDataSet;
             this.поликлиникаDataSetBindingSource.Position = 0;
             // 
-            // Form1
+            // поликлиникаDataSet
+            // 
+            this.поликлиникаDataSet.DataSetName = "ПоликлиникаDataSet";
+            this.поликлиникаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
