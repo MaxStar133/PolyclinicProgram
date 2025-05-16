@@ -13,7 +13,7 @@ namespace Polyclinic
     {
         private string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Поликлиника.mdb;Persist Security Info=False;";
 
-        public  DataTable GetPatientsData()
+        public  DataTable GetData(string dataQuery)
         {
             DataTable dataTable = new DataTable();
 
@@ -22,7 +22,7 @@ namespace Polyclinic
                 using (OleDbConnection connection = new OleDbConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT * FROM Пациенты";
+                    string query = $"SELECT * FROM {dataQuery}";
 
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
@@ -40,5 +40,7 @@ namespace Polyclinic
             }
             return dataTable;
         }
+
+
     }
 }
