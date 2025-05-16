@@ -118,11 +118,11 @@ namespace Polyclinic {
                 if ((ds.Tables["Диагнозы"] != null)) {
                     base.Tables.Add(new ДиагнозыDataTable(ds.Tables["Диагнозы"]));
                 }
-                if ((ds.Tables["Записи в медкарте"] != null)) {
-                    base.Tables.Add(new Записи_в_медкартеDataTable(ds.Tables["Записи в медкарте"]));
+                if ((ds.Tables["Записи_в_медкарте"] != null)) {
+                    base.Tables.Add(new Записи_в_медкартеDataTable(ds.Tables["Записи_в_медкарте"]));
                 }
-                if ((ds.Tables["Запись на приём"] != null)) {
-                    base.Tables.Add(new Запись_на_приёмDataTable(ds.Tables["Запись на приём"]));
+                if ((ds.Tables["Запись_на_приём"] != null)) {
+                    base.Tables.Add(new Запись_на_приёмDataTable(ds.Tables["Запись_на_приём"]));
                 }
                 if ((ds.Tables["Кабинеты"] != null)) {
                     base.Tables.Add(new КабинетыDataTable(ds.Tables["Кабинеты"]));
@@ -130,14 +130,14 @@ namespace Polyclinic {
                 if ((ds.Tables["Лекарства"] != null)) {
                     base.Tables.Add(new ЛекарстваDataTable(ds.Tables["Лекарства"]));
                 }
-                if ((ds.Tables["Медицинские услуги"] != null)) {
-                    base.Tables.Add(new Медицинские_услугиDataTable(ds.Tables["Медицинские услуги"]));
+                if ((ds.Tables["Медицинские_услуги"] != null)) {
+                    base.Tables.Add(new Медицинские_услугиDataTable(ds.Tables["Медицинские_услуги"]));
                 }
                 if ((ds.Tables["Медкарты"] != null)) {
                     base.Tables.Add(new МедкартыDataTable(ds.Tables["Медкарты"]));
                 }
-                if ((ds.Tables["Оказанные услуги"] != null)) {
-                    base.Tables.Add(new Оказанные_услугиDataTable(ds.Tables["Оказанные услуги"]));
+                if ((ds.Tables["Оказанные_услуги"] != null)) {
+                    base.Tables.Add(new Оказанные_услугиDataTable(ds.Tables["Оказанные_услуги"]));
                 }
                 if ((ds.Tables["Отделения"] != null)) {
                     base.Tables.Add(new ОтделенияDataTable(ds.Tables["Отделения"]));
@@ -148,8 +148,8 @@ namespace Polyclinic {
                 if ((ds.Tables["Платежи"] != null)) {
                     base.Tables.Add(new ПлатежиDataTable(ds.Tables["Платежи"]));
                 }
-                if ((ds.Tables["Приёмы врачей"] != null)) {
-                    base.Tables.Add(new Приёмы_врачейDataTable(ds.Tables["Приёмы врачей"]));
+                if ((ds.Tables["Приёмы_врачей"] != null)) {
+                    base.Tables.Add(new Приёмы_врачейDataTable(ds.Tables["Приёмы_врачей"]));
                 }
                 if ((ds.Tables["Рецепты"] != null)) {
                     base.Tables.Add(new РецептыDataTable(ds.Tables["Рецепты"]));
@@ -398,11 +398,11 @@ namespace Polyclinic {
                 if ((ds.Tables["Диагнозы"] != null)) {
                     base.Tables.Add(new ДиагнозыDataTable(ds.Tables["Диагнозы"]));
                 }
-                if ((ds.Tables["Записи в медкарте"] != null)) {
-                    base.Tables.Add(new Записи_в_медкартеDataTable(ds.Tables["Записи в медкарте"]));
+                if ((ds.Tables["Записи_в_медкарте"] != null)) {
+                    base.Tables.Add(new Записи_в_медкартеDataTable(ds.Tables["Записи_в_медкарте"]));
                 }
-                if ((ds.Tables["Запись на приём"] != null)) {
-                    base.Tables.Add(new Запись_на_приёмDataTable(ds.Tables["Запись на приём"]));
+                if ((ds.Tables["Запись_на_приём"] != null)) {
+                    base.Tables.Add(new Запись_на_приёмDataTable(ds.Tables["Запись_на_приём"]));
                 }
                 if ((ds.Tables["Кабинеты"] != null)) {
                     base.Tables.Add(new КабинетыDataTable(ds.Tables["Кабинеты"]));
@@ -410,14 +410,14 @@ namespace Polyclinic {
                 if ((ds.Tables["Лекарства"] != null)) {
                     base.Tables.Add(new ЛекарстваDataTable(ds.Tables["Лекарства"]));
                 }
-                if ((ds.Tables["Медицинские услуги"] != null)) {
-                    base.Tables.Add(new Медицинские_услугиDataTable(ds.Tables["Медицинские услуги"]));
+                if ((ds.Tables["Медицинские_услуги"] != null)) {
+                    base.Tables.Add(new Медицинские_услугиDataTable(ds.Tables["Медицинские_услуги"]));
                 }
                 if ((ds.Tables["Медкарты"] != null)) {
                     base.Tables.Add(new МедкартыDataTable(ds.Tables["Медкарты"]));
                 }
-                if ((ds.Tables["Оказанные услуги"] != null)) {
-                    base.Tables.Add(new Оказанные_услугиDataTable(ds.Tables["Оказанные услуги"]));
+                if ((ds.Tables["Оказанные_услуги"] != null)) {
+                    base.Tables.Add(new Оказанные_услугиDataTable(ds.Tables["Оказанные_услуги"]));
                 }
                 if ((ds.Tables["Отделения"] != null)) {
                     base.Tables.Add(new ОтделенияDataTable(ds.Tables["Отделения"]));
@@ -428,8 +428,8 @@ namespace Polyclinic {
                 if ((ds.Tables["Платежи"] != null)) {
                     base.Tables.Add(new ПлатежиDataTable(ds.Tables["Платежи"]));
                 }
-                if ((ds.Tables["Приёмы врачей"] != null)) {
-                    base.Tables.Add(new Приёмы_врачейDataTable(ds.Tables["Приёмы врачей"]));
+                if ((ds.Tables["Приёмы_врачей"] != null)) {
+                    base.Tables.Add(new Приёмы_врачейDataTable(ds.Tables["Приёмы_врачей"]));
                 }
                 if ((ds.Tables["Рецепты"] != null)) {
                     base.Tables.Add(new РецептыDataTable(ds.Tables["Рецепты"]));
@@ -482,13 +482,13 @@ namespace Polyclinic {
                     this.tableДиагнозы.InitVars();
                 }
             }
-            this.tableЗаписи_в_медкарте = ((Записи_в_медкартеDataTable)(base.Tables["Записи в медкарте"]));
+            this.tableЗаписи_в_медкарте = ((Записи_в_медкартеDataTable)(base.Tables["Записи_в_медкарте"]));
             if ((initTable == true)) {
                 if ((this.tableЗаписи_в_медкарте != null)) {
                     this.tableЗаписи_в_медкарте.InitVars();
                 }
             }
-            this.tableЗапись_на_приём = ((Запись_на_приёмDataTable)(base.Tables["Запись на приём"]));
+            this.tableЗапись_на_приём = ((Запись_на_приёмDataTable)(base.Tables["Запись_на_приём"]));
             if ((initTable == true)) {
                 if ((this.tableЗапись_на_приём != null)) {
                     this.tableЗапись_на_приём.InitVars();
@@ -506,7 +506,7 @@ namespace Polyclinic {
                     this.tableЛекарства.InitVars();
                 }
             }
-            this.tableМедицинские_услуги = ((Медицинские_услугиDataTable)(base.Tables["Медицинские услуги"]));
+            this.tableМедицинские_услуги = ((Медицинские_услугиDataTable)(base.Tables["Медицинские_услуги"]));
             if ((initTable == true)) {
                 if ((this.tableМедицинские_услуги != null)) {
                     this.tableМедицинские_услуги.InitVars();
@@ -518,7 +518,7 @@ namespace Polyclinic {
                     this.tableМедкарты.InitVars();
                 }
             }
-            this.tableОказанные_услуги = ((Оказанные_услугиDataTable)(base.Tables["Оказанные услуги"]));
+            this.tableОказанные_услуги = ((Оказанные_услугиDataTable)(base.Tables["Оказанные_услуги"]));
             if ((initTable == true)) {
                 if ((this.tableОказанные_услуги != null)) {
                     this.tableОказанные_услуги.InitVars();
@@ -542,7 +542,7 @@ namespace Polyclinic {
                     this.tableПлатежи.InitVars();
                 }
             }
-            this.tableПриёмы_врачей = ((Приёмы_врачейDataTable)(base.Tables["Приёмы врачей"]));
+            this.tableПриёмы_врачей = ((Приёмы_врачейDataTable)(base.Tables["Приёмы_врачей"]));
             if ((initTable == true)) {
                 if ((this.tableПриёмы_врачей != null)) {
                     this.tableПриёмы_врачей.InitVars();
@@ -1512,7 +1512,7 @@ namespace Polyclinic {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Записи_в_медкартеDataTable() {
-                this.TableName = "Записи в медкарте";
+                this.TableName = "Записи_в_медкарте";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1834,7 +1834,7 @@ namespace Polyclinic {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Запись_на_приёмDataTable() {
-                this.TableName = "Запись на приём";
+                this.TableName = "Запись_на_приём";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2701,7 +2701,7 @@ namespace Polyclinic {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Медицинские_услугиDataTable() {
-                this.TableName = "Медицинские услуги";
+                this.TableName = "Медицинские_услуги";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3276,7 +3276,7 @@ namespace Polyclinic {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Оказанные_услугиDataTable() {
-                this.TableName = "Оказанные услуги";
+                this.TableName = "Оказанные_услуги";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -4542,7 +4542,7 @@ namespace Polyclinic {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Приёмы_врачейDataTable() {
-                this.TableName = "Приёмы врачей";
+                this.TableName = "Приёмы_врачей";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -5777,7 +5777,7 @@ namespace Polyclinic {
                         return ((string)(this[this.tableЗаписи_в_медкарте.Жалобы_пациентаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Жалобы_пациента\' в таблице \'Записи в медкарте\' равно DBNull" +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Жалобы_пациента\' в таблице \'Записи_в_медкарте\' равно DBNull" +
                                 ".", e);
                     }
                 }
@@ -5794,7 +5794,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableЗаписи_в_медкарте.Id_диагнозаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_диагноза\' в таблице \'Записи в медкарте\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_диагноза\' в таблице \'Записи_в_медкарте\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5810,7 +5810,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableЗаписи_в_медкарте.Id_записи_на_приёмColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_записи_на_приём\' в таблице \'Записи в медкарте\' равно DBN" +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_записи_на_приём\' в таблице \'Записи_в_медкарте\' равно DBN" +
                                 "ull.", e);
                     }
                 }
@@ -5827,7 +5827,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableЗаписи_в_медкарте.Id_медкартыColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_медкарты\' в таблице \'Записи в медкарте\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_медкарты\' в таблице \'Записи_в_медкарте\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5961,7 +5961,7 @@ namespace Polyclinic {
                         return ((string)(this[this.tableЗапись_на_приём.СтатусColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Статус\' в таблице \'Запись на приём\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Статус\' в таблице \'Запись_на_приём\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5977,7 +5977,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableЗапись_на_приём.Id_приёма_врачаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_приёма_врача\' в таблице \'Запись на приём\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_приёма_врача\' в таблице \'Запись_на_приём\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5993,7 +5993,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableЗапись_на_приём.Id_пациентаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_пациента\' в таблице \'Запись на приём\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_пациента\' в таблице \'Запись_на_приём\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -6284,7 +6284,7 @@ namespace Polyclinic {
                         return ((string)(this[this.tableМедицинские_услуги.НазваниеColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Название\' в таблице \'Медицинские услуги\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Название\' в таблице \'Медицинские_услуги\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -6300,7 +6300,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableМедицинские_услуги.СтоимостьColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Стоимость\' в таблице \'Медицинские услуги\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Стоимость\' в таблице \'Медицинские_услуги\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -6482,7 +6482,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableОказанные_услуги.Id_медицинской_услугиColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_медицинской_услуги\' в таблице \'Оказанные услуги\' равно D" +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_медицинской_услуги\' в таблице \'Оказанные_услуги\' равно D" +
                                 "BNull.", e);
                     }
                 }
@@ -6499,7 +6499,7 @@ namespace Polyclinic {
                         return ((global::System.DateTime)(this[this.tableОказанные_услуги.Дата_оказанияColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_оказания\' в таблице \'Оказанные услуги\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_оказания\' в таблице \'Оказанные_услуги\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -6515,7 +6515,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableОказанные_услуги.Id_записи_на_приёмColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_записи_на_приём\' в таблице \'Оказанные услуги\' равно DBNu" +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_записи_на_приём\' в таблице \'Оказанные_услуги\' равно DBNu" +
                                 "ll.", e);
                     }
                 }
@@ -7085,7 +7085,7 @@ namespace Polyclinic {
                         return ((global::System.DateTime)(this[this.tableПриёмы_врачей.Дата_приёмаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_приёма\' в таблице \'Приёмы врачей\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата_приёма\' в таблице \'Приёмы_врачей\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -7101,7 +7101,7 @@ namespace Polyclinic {
                         return ((global::System.DateTime)(this[this.tableПриёмы_врачей.Время_началаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Время_начала\' в таблице \'Приёмы врачей\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Время_начала\' в таблице \'Приёмы_врачей\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -7117,7 +7117,7 @@ namespace Polyclinic {
                         return ((global::System.DateTime)(this[this.tableПриёмы_врачей.Время_окончанияColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Время_окончания\' в таблице \'Приёмы врачей\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Время_окончания\' в таблице \'Приёмы_врачей\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -7133,7 +7133,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableПриёмы_врачей.Id_врачаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_врача\' в таблице \'Приёмы врачей\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_врача\' в таблице \'Приёмы_врачей\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -7149,7 +7149,7 @@ namespace Polyclinic {
                         return ((int)(this[this.tableПриёмы_врачей.Id_кабинетаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_кабинета\' в таблице \'Приёмы врачей\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Id_кабинета\' в таблице \'Приёмы_врачей\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -8943,7 +8943,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Записи в медкарте";
+            tableMapping.DataSetTable = "Записи_в_медкарте";
             tableMapping.ColumnMappings.Add("Id_записи_в_медкарте", "Id_записи_в_медкарте");
             tableMapping.ColumnMappings.Add("Жалобы_пациента", "Жалобы_пациента");
             tableMapping.ColumnMappings.Add("Id_диагноза", "Id_диагноза");
@@ -8952,7 +8952,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Записи в медкарте` WHERE ((`Id_записи_в_медкарте` = ?) AND ((? = 1 AND `Id_диагноза` IS NULL) OR (`Id_диагноза` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_медкарты` IS NULL) OR (`Id_медкарты` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Записи_в_медкарте` WHERE ((`Id_записи_в_медкарте` = ?) AND ((? = 1 AND `Id_диагноза` IS NULL) OR (`Id_диагноза` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_медкарты` IS NULL) OR (`Id_медкарты` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_записи_в_медкарте", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_записи_в_медкарте", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Id_диагноза", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_диагноза", global::System.Data.DataRowVersion.Original, true, null));
@@ -8963,7 +8963,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_медкарты", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_медкарты", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Записи в медкарте` (`Id_записи_в_медкарте`, `Жалобы_пациента`, `Id_д" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Записи_в_медкарте` (`Id_записи_в_медкарте`, `Жалобы_пациента`, `Id_д" +
                 "иагноза`, `Id_записи_на_приём`, `Id_медкарты`) VALUES (?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_записи_в_медкарте", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_записи_в_медкарте", global::System.Data.DataRowVersion.Current, false, null));
@@ -8973,7 +8973,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_медкарты", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_медкарты", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Записи в медкарте` SET `Id_записи_в_медкарте` = ?, `Жалобы_пациента` = ?, `Id_диагноза` = ?, `Id_записи_на_приём` = ?, `Id_медкарты` = ? WHERE ((`Id_записи_в_медкарте` = ?) AND ((? = 1 AND `Id_диагноза` IS NULL) OR (`Id_диагноза` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_медкарты` IS NULL) OR (`Id_медкарты` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Записи_в_медкарте` SET `Id_записи_в_медкарте` = ?, `Жалобы_пациента` = ?, `Id_диагноза` = ?, `Id_записи_на_приём` = ?, `Id_медкарты` = ? WHERE ((`Id_записи_в_медкарте` = ?) AND ((? = 1 AND `Id_диагноза` IS NULL) OR (`Id_диагноза` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_медкарты` IS NULL) OR (`Id_медкарты` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_записи_в_медкарте", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_записи_в_медкарте", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Жалобы_пациента", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Жалобы_пациента", global::System.Data.DataRowVersion.Current, false, null));
@@ -9003,7 +9003,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id_записи_в_медкарте, Жалобы_пациента, Id_диагноза, Id_записи_на_приём, Id" +
-                "_медкарты FROM [Записи в медкарте]";
+                "_медкарты FROM Записи_в_медкарте";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9042,7 +9042,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ПоликлиникаDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Записи в медкарте");
+            return this.Adapter.Update(dataSet, "Записи_в_медкарте");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9286,7 +9286,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Запись на приём";
+            tableMapping.DataSetTable = "Запись_на_приём";
             tableMapping.ColumnMappings.Add("Id_записи_на_приём", "Id_записи_на_приём");
             tableMapping.ColumnMappings.Add("Статус", "Статус");
             tableMapping.ColumnMappings.Add("Id_приёма_врача", "Id_приёма_врача");
@@ -9294,7 +9294,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Запись на приём` WHERE ((`Id_записи_на_приём` = ?) AND ((? = 1 AND `" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Запись_на_приём` WHERE ((`Id_записи_на_приём` = ?) AND ((? = 1 AND `" +
                 "Статус` IS NULL) OR (`Статус` = ?)) AND ((? = 1 AND `Id_приёма_врача` IS NULL) O" +
                 "R (`Id_приёма_врача` = ?)) AND ((? = 1 AND `Id_пациента` IS NULL) OR (`Id_пациен" +
                 "та` = ?)))";
@@ -9308,7 +9308,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Запись на приём` (`Id_записи_на_приём`, `Статус`, `Id_приёма_врача`," +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Запись_на_приём` (`Id_записи_на_приём`, `Статус`, `Id_приёма_врача`," +
                 " `Id_пациента`) VALUES (?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_записи_на_приём", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_записи_на_приём", global::System.Data.DataRowVersion.Current, false, null));
@@ -9317,7 +9317,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Запись на приём` SET `Id_записи_на_приём` = ?, `Статус` = ?, `Id_приёма_врача` = ?, `Id_пациента` = ? WHERE ((`Id_записи_на_приём` = ?) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)) AND ((? = 1 AND `Id_приёма_врача` IS NULL) OR (`Id_приёма_врача` = ?)) AND ((? = 1 AND `Id_пациента` IS NULL) OR (`Id_пациента` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Запись_на_приём` SET `Id_записи_на_приём` = ?, `Статус` = ?, `Id_приёма_врача` = ?, `Id_пациента` = ? WHERE ((`Id_записи_на_приём` = ?) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)) AND ((? = 1 AND `Id_приёма_врача` IS NULL) OR (`Id_приёма_врача` = ?)) AND ((? = 1 AND `Id_пациента` IS NULL) OR (`Id_пациента` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_записи_на_приём", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_записи_на_приём", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Статус", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Статус", global::System.Data.DataRowVersion.Current, false, null));
@@ -9345,8 +9345,8 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_записи_на_приём, Статус, Id_приёма_врача, Id_пациента FROM [Запись на п" +
-                "риём]";
+            this._commandCollection[0].CommandText = "SELECT Id_записи_на_приём, Статус, Id_приёма_врача, Id_пациента FROM Запись_на_пр" +
+                "иём";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9385,7 +9385,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ПоликлиникаDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Запись на приём");
+            return this.Adapter.Update(dataSet, "Запись_на_приём");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10305,14 +10305,14 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Медицинские услуги";
+            tableMapping.DataSetTable = "Медицинские_услуги";
             tableMapping.ColumnMappings.Add("Id_медицинской_услуги", "Id_медицинской_услуги");
             tableMapping.ColumnMappings.Add("Название", "Название");
             tableMapping.ColumnMappings.Add("Стоимость", "Стоимость");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Медицинские услуги` WHERE ((`Id_медицинской_услуги` = ?) AND ((? = 1" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Медицинские_услуги` WHERE ((`Id_медицинской_услуги` = ?) AND ((? = 1" +
                 " AND `Название` IS NULL) OR (`Название` = ?)) AND ((? = 1 AND `Стоимость` IS NUL" +
                 "L) OR (`Стоимость` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
@@ -10323,7 +10323,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Стоимость", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Стоимость", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Медицинские услуги` (`Id_медицинской_услуги`, `Название`, `Стоимость" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Медицинские_услуги` (`Id_медицинской_услуги`, `Название`, `Стоимость" +
                 "`) VALUES (?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_медицинской_услуги", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_медицинской_услуги", global::System.Data.DataRowVersion.Current, false, null));
@@ -10331,7 +10331,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Стоимость", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Стоимость", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Медицинские услуги` SET `Id_медицинской_услуги` = ?, `Название` = ?, `Сто" +
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Медицинские_услуги` SET `Id_медицинской_услуги` = ?, `Название` = ?, `Сто" +
                 "имость` = ? WHERE ((`Id_медицинской_услуги` = ?) AND ((? = 1 AND `Название` IS N" +
                 "ULL) OR (`Название` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` =" +
                 " ?)))";
@@ -10359,7 +10359,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_медицинской_услуги, Название, Стоимость FROM [Медицинские услуги]";
+            this._commandCollection[0].CommandText = "SELECT Id_медицинской_услуги, Название, Стоимость FROM Медицинские_услуги";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10398,7 +10398,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ПоликлиникаDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Медицинские услуги");
+            return this.Adapter.Update(dataSet, "Медицинские_услуги");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11028,7 +11028,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Оказанные услуги";
+            tableMapping.DataSetTable = "Оказанные_услуги";
             tableMapping.ColumnMappings.Add("Id_оказанной_услуги", "Id_оказанной_услуги");
             tableMapping.ColumnMappings.Add("Id_медицинской_услуги", "Id_медицинской_услуги");
             tableMapping.ColumnMappings.Add("Дата_оказания", "Дата_оказания");
@@ -11036,7 +11036,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Оказанные услуги` WHERE ((`Id_оказанной_услуги` = ?) AND ((? = 1 AND `Id_медицинской_услуги` IS NULL) OR (`Id_медицинской_услуги` = ?)) AND ((? = 1 AND `Дата_оказания` IS NULL) OR (`Дата_оказания` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Оказанные_услуги` WHERE ((`Id_оказанной_услуги` = ?) AND ((? = 1 AND `Id_медицинской_услуги` IS NULL) OR (`Id_медицинской_услуги` = ?)) AND ((? = 1 AND `Дата_оказания` IS NULL) OR (`Дата_оказания` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_оказанной_услуги", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_оказанной_услуги", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Id_медицинской_услуги", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_медицинской_услуги", global::System.Data.DataRowVersion.Original, true, null));
@@ -11047,7 +11047,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_записи_на_приём", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_записи_на_приём", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Оказанные услуги` (`Id_оказанной_услуги`, `Id_медицинской_услуги`, `" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Оказанные_услуги` (`Id_оказанной_услуги`, `Id_медицинской_услуги`, `" +
                 "Дата_оказания`, `Id_записи_на_приём`) VALUES (?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_оказанной_услуги", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_оказанной_услуги", global::System.Data.DataRowVersion.Current, false, null));
@@ -11056,7 +11056,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_записи_на_приём", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_записи_на_приём", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Оказанные услуги` SET `Id_оказанной_услуги` = ?, `Id_медицинской_услуги` = ?, `Дата_оказания` = ?, `Id_записи_на_приём` = ? WHERE ((`Id_оказанной_услуги` = ?) AND ((? = 1 AND `Id_медицинской_услуги` IS NULL) OR (`Id_медицинской_услуги` = ?)) AND ((? = 1 AND `Дата_оказания` IS NULL) OR (`Дата_оказания` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Оказанные_услуги` SET `Id_оказанной_услуги` = ?, `Id_медицинской_услуги` = ?, `Дата_оказания` = ?, `Id_записи_на_приём` = ? WHERE ((`Id_оказанной_услуги` = ?) AND ((? = 1 AND `Id_медицинской_услуги` IS NULL) OR (`Id_медицинской_услуги` = ?)) AND ((? = 1 AND `Дата_оказания` IS NULL) OR (`Дата_оказания` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_оказанной_услуги", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_оказанной_услуги", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_медицинской_услуги", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_медицинской_услуги", global::System.Data.DataRowVersion.Current, false, null));
@@ -11085,7 +11085,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id_оказанной_услуги, Id_медицинской_услуги, Дата_оказания, Id_записи_на_пр" +
-                "иём FROM [Оказанные услуги]";
+                "иём FROM Оказанные_услуги";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11124,7 +11124,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ПоликлиникаDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Оказанные услуги");
+            return this.Adapter.Update(dataSet, "Оказанные_услуги");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12658,7 +12658,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Приёмы врачей";
+            tableMapping.DataSetTable = "Приёмы_врачей";
             tableMapping.ColumnMappings.Add("Id_приёма_врача", "Id_приёма_врача");
             tableMapping.ColumnMappings.Add("Дата_приёма", "Дата_приёма");
             tableMapping.ColumnMappings.Add("Время_начала", "Время_начала");
@@ -12668,7 +12668,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Приёмы врачей` WHERE ((`Id_приёма_врача` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Приёмы_врачей` WHERE ((`Id_приёма_врача` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_приёма_врача", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма_врача", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_приёма", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приёма", global::System.Data.DataRowVersion.Original, true, null));
@@ -12683,7 +12683,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_кабинета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_кабинета", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Приёмы врачей` (`Id_приёма_врача`, `Дата_приёма`, `Время_начала`, `В" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Приёмы_врачей` (`Id_приёма_врача`, `Дата_приёма`, `Время_начала`, `В" +
                 "ремя_окончания`, `Id_врача`, `Id_кабинета`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_приёма_врача", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма_врача", global::System.Data.DataRowVersion.Current, false, null));
@@ -12694,7 +12694,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_кабинета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_кабинета", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Приёмы врачей` SET `Id_приёма_врача` = ?, `Дата_приёма` = ?, `Время_начала` = ?, `Время_окончания` = ?, `Id_врача` = ?, `Id_кабинета` = ? WHERE ((`Id_приёма_врача` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Приёмы_врачей` SET `Id_приёма_врача` = ?, `Дата_приёма` = ?, `Время_начала` = ?, `Время_окончания` = ?, `Id_врача` = ?, `Id_кабинета` = ? WHERE ((`Id_приёма_врача` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_приёма_врача", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма_врача", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_приёма", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приёма", global::System.Data.DataRowVersion.Current, false, null));
@@ -12729,7 +12729,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id_приёма_врача, Дата_приёма, Время_начала, Время_окончания, Id_врача, Id_" +
-                "кабинета FROM [Приёмы врачей]";
+                "кабинета FROM Приёмы_врачей";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12768,7 +12768,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ПоликлиникаDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Приёмы врачей");
+            return this.Adapter.Update(dataSet, "Приёмы_врачей");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
