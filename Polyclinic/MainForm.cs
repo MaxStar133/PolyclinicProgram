@@ -11,15 +11,12 @@ namespace Polyclinic
         public MainWindow()
         {
             InitializeComponent();
-            buttonEndEdit.Enabled = false;
-            buttonCancelEdit.Enabled = false;
+            ButtonDisabled();
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            buttonAddition.Enabled = true;
-            buttonEndEdit.Enabled = false;
-            buttonCancelEdit.Enabled = false;
+            ButtonDisabled();
             if (e.Node.Text == "Врачи")
             {
                 DataTable patientsData = query.GetData("Врачи");
@@ -139,11 +136,7 @@ namespace Polyclinic
                 dataGridView1.CurrentCell = dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0];
                 dataGridView1.BeginEdit(true);
 
-                // Отключаем кнопку добавления
-                buttonAddition.Enabled = false;
-
-                buttonEndEdit.Enabled = true;
-                buttonCancelEdit.Enabled = true;
+                ButtonEnabled();
             }
             else
             {
@@ -168,8 +161,7 @@ namespace Polyclinic
 
                     // Только если SaveChangesToDB выполнилось без исключений:
                     dataGridView1.EndEdit();
-                    buttonAddition.Enabled = true;
-                    buttonEndEdit.Enabled = false;
+                    ButtonDisabled();
 
                 }
                 catch (OleDbException ex)
@@ -182,9 +174,7 @@ namespace Polyclinic
                     MessageBox.Show(errorMessage, "Ошибка сохранения",
                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    // Оставляем кнопки в прежнем состоянии (редактирование продолжается)
-                    buttonAddition.Enabled = false;
-                    buttonEndEdit.Enabled = true;
+                    ButtonEnabled();
                 }
             }
         }
@@ -196,13 +186,39 @@ namespace Polyclinic
                 // Отменяем изменения
                 dataTable.RejectChanges();
 
-                // Включаем кнопку добавления
-                buttonAddition.Enabled = true;
-
-                // Отключаем кнопки завершения/отмены
-                buttonEndEdit.Enabled = false;
-                buttonCancelEdit.Enabled = false;
+                ButtonDisabled();
             }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите запись для редактирования", "Информация",
+                              MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+            dataGridView1.BeginEdit(true);
+
+            ButtonEnabled();
+        }
+
+        private void ButtonEnabled()
+        {
+            buttonAddition.Enabled = false;
+            buttonEdit.Enabled = false;
+            buttonEndEdit.Enabled = true;
+            buttonCancelEdit.Enabled = true;
+        }
+        private void ButtonDisabled()
+        {
+            buttonEdit.Enabled = true;
+            buttonAddition.Enabled = true;
+            buttonEndEdit.Enabled = false;
+            buttonCancelEdit.Enabled = false;
         }
     }
 }
