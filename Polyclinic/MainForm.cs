@@ -210,6 +210,7 @@ namespace Polyclinic
         {
             buttonAddition.Enabled = false;
             buttonEdit.Enabled = false;
+            buttonDelete.Enabled = false;
             buttonEndEdit.Enabled = true;
             buttonCancelEdit.Enabled = true;
         }
@@ -217,8 +218,40 @@ namespace Polyclinic
         {
             buttonEdit.Enabled = true;
             buttonAddition.Enabled = true;
+            buttonDelete.Enabled = true;
             buttonEndEdit.Enabled = false;
             buttonCancelEdit.Enabled = false;
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            // Проверяем, что есть выбранная строка
+            if (dataGridView1.SelectedRows.Count == 0) return;
+
+            // Простое подтверждение удаления
+            if (MessageBox.Show("Удалить запись?", "Подтверждение",
+                               MessageBoxButtons.YesNo) != DialogResult.Yes) return;
+
+            // Получаем выбранную строку
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+            // Удаляем строку из DataTable
+            if (dataGridView1.DataSource is DataTable dataTable)
+            {
+                try
+                {
+                    // Удаление строки
+                    ((DataRowView)selectedRow.DataBoundItem).Row.Delete();
+
+                    // Сохраняем изменения в БД
+                    query.SaveChangesToDB(dataTable, treeView1.SelectedNode.Text.Replace(" ", "_"));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при удалении: {ex.Message}");
+                    dataTable.RejectChanges(); // Откатываем изменения при ошибке
+                }
+            }
         }
     }
 }
