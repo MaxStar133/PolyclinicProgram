@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.OleDb;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace Polyclinic
 {
     public class Query
     {
-        private string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Поликлиника.mdb;Persist Security Info=False;";
+        private string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""C:\Users\ov4in\OneDrive\Рабочий стол\К.р. проект. бд\Поликлиника.mdb"";Persist Security Info=False;";
 
-        public  DataTable GetData(string dataQuery)
+        public DataTable GetData(string dataQuery)
         {
             DataTable dataTable = new DataTable();
 
@@ -41,6 +37,22 @@ namespace Polyclinic
             return dataTable;
         }
 
+        public void SaveChangesToDB(DataTable dataTable, string tableName)
+        {
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
 
+                string selectQuery = $"SELECT * FROM {tableName}";
+                OleDbDataAdapter adapter = new OleDbDataAdapter(selectQuery, connection);
+
+                OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
+                adapter.InsertCommand = builder.GetInsertCommand();
+                adapter.UpdateCommand = builder.GetUpdateCommand();
+                adapter.DeleteCommand = builder.GetDeleteCommand();
+
+                adapter.Update(dataTable);
+            }   
+        }
     }
 }
