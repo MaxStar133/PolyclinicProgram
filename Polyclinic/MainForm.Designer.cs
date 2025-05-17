@@ -70,6 +70,7 @@
             this.buttonCancelEdit = new System.Windows.Forms.Button();
             this.поликлиникаDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.поликлиникаDataSet = new Polyclinic.ПоликлиникаDataSet();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -174,13 +175,15 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.625F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.375F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 456F));
+            this.tableLayoutPanel3.ColumnCount = 4;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.42453F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.57547F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
             this.tableLayoutPanel3.Controls.Add(this.buttonAddition, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonEndEdit, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonCancelEdit, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonEndEdit, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonCancelEdit, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonEdit, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -201,7 +204,7 @@
             // 
             // buttonEndEdit
             // 
-            this.buttonEndEdit.Location = new System.Drawing.Point(130, 3);
+            this.buttonEndEdit.Location = new System.Drawing.Point(427, 3);
             this.buttonEndEdit.Name = "buttonEndEdit";
             this.buttonEndEdit.Size = new System.Drawing.Size(169, 20);
             this.buttonEndEdit.TabIndex = 1;
@@ -211,7 +214,7 @@
             // 
             // buttonCancelEdit
             // 
-            this.buttonCancelEdit.Location = new System.Drawing.Point(316, 3);
+            this.buttonCancelEdit.Location = new System.Drawing.Point(605, 3);
             this.buttonCancelEdit.Name = "buttonCancelEdit";
             this.buttonCancelEdit.Size = new System.Drawing.Size(154, 20);
             this.buttonCancelEdit.TabIndex = 2;
@@ -228,6 +231,16 @@
             // 
             this.поликлиникаDataSet.DataSetName = "ПоликлиникаDataSet";
             this.поликлиникаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(132, 3);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(128, 20);
+            this.buttonEdit.TabIndex = 3;
+            this.buttonEdit.Text = "Изменить запись";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // MainWindow
             // 
@@ -259,6 +272,7 @@
         private System.Windows.Forms.Button buttonAddition;
         private System.Windows.Forms.Button buttonEndEdit;
         private System.Windows.Forms.Button buttonCancelEdit;
+        private System.Windows.Forms.Button buttonEdit;
     }
 }
 

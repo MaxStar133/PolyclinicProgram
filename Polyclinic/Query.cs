@@ -52,6 +52,8 @@ namespace Polyclinic
                 adapter.DeleteCommand = builder.GetDeleteCommand();
 
                 adapter.Update(dataTable);
+
+
             }   
         }
     }
