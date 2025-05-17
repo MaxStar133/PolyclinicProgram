@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Врачи");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Диагнозы");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Записи в медкарте");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Запись на приём");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Кабинеты");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Лекарства");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Медицинские услуги");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Медкарты");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Оказанные услуги");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Отделения");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Пациенты");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Платежи");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Приёмы врачей");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Рецепты");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Специальности");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Таблицы", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14,
-            treeNode15});
+            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Врачи");
+            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Диагнозы");
+            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Записи в медкарте");
+            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Запись на приём");
+            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Кабинеты");
+            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Лекарства");
+            System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("Медицинские услуги");
+            System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("Медкарты");
+            System.Windows.Forms.TreeNode treeNode105 = new System.Windows.Forms.TreeNode("Оказанные услуги");
+            System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("Отделения");
+            System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("Пациенты");
+            System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("Платежи");
+            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Приёмы врачей");
+            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("Рецепты");
+            System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Специальности");
+            System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Таблицы", new System.Windows.Forms.TreeNode[] {
+            treeNode97,
+            treeNode98,
+            treeNode99,
+            treeNode100,
+            treeNode101,
+            treeNode102,
+            treeNode103,
+            treeNode104,
+            treeNode105,
+            treeNode106,
+            treeNode107,
+            treeNode108,
+            treeNode109,
+            treeNode110,
+            treeNode111});
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -68,9 +68,10 @@
             this.buttonAddition = new System.Windows.Forms.Button();
             this.buttonEndEdit = new System.Windows.Forms.Button();
             this.buttonCancelEdit = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.поликлиникаDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.поликлиникаDataSet = new Polyclinic.ПоликлиникаDataSet();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -120,40 +121,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Врачи";
-            treeNode1.Text = "Врачи";
-            treeNode2.Name = "Диагнозы";
-            treeNode2.Text = "Диагнозы";
-            treeNode3.Name = "Записи в медкарте";
-            treeNode3.Text = "Записи в медкарте";
-            treeNode4.Name = "Запись на приём";
-            treeNode4.Text = "Запись на приём";
-            treeNode5.Name = "Кабинеты";
-            treeNode5.Text = "Кабинеты";
-            treeNode6.Name = "Лекарства";
-            treeNode6.Text = "Лекарства";
-            treeNode7.Name = "Медицинские услуги";
-            treeNode7.Text = "Медицинские услуги";
-            treeNode8.Name = "Медкарты";
-            treeNode8.Text = "Медкарты";
-            treeNode9.Name = "Оказанные услуги";
-            treeNode9.Text = "Оказанные услуги";
-            treeNode10.Name = "Отделения";
-            treeNode10.Text = "Отделения";
-            treeNode11.Name = "Пациенты";
-            treeNode11.Text = "Пациенты";
-            treeNode12.Name = "Платежи";
-            treeNode12.Text = "Платежи";
-            treeNode13.Name = "Приёмы врачей";
-            treeNode13.Text = "Приёмы врачей";
-            treeNode14.Name = "Рецепты";
-            treeNode14.Text = "Рецепты";
-            treeNode15.Name = "Специальности";
-            treeNode15.Text = "Специальности";
-            treeNode16.Name = "Таблицы";
-            treeNode16.Text = "Таблицы";
+            treeNode97.Name = "Врачи";
+            treeNode97.Text = "Врачи";
+            treeNode98.Name = "Диагнозы";
+            treeNode98.Text = "Диагнозы";
+            treeNode99.Name = "Записи в медкарте";
+            treeNode99.Text = "Записи в медкарте";
+            treeNode100.Name = "Запись на приём";
+            treeNode100.Text = "Запись на приём";
+            treeNode101.Name = "Кабинеты";
+            treeNode101.Text = "Кабинеты";
+            treeNode102.Name = "Лекарства";
+            treeNode102.Text = "Лекарства";
+            treeNode103.Name = "Медицинские услуги";
+            treeNode103.Text = "Медицинские услуги";
+            treeNode104.Name = "Медкарты";
+            treeNode104.Text = "Медкарты";
+            treeNode105.Name = "Оказанные услуги";
+            treeNode105.Text = "Оказанные услуги";
+            treeNode106.Name = "Отделения";
+            treeNode106.Text = "Отделения";
+            treeNode107.Name = "Пациенты";
+            treeNode107.Text = "Пациенты";
+            treeNode108.Name = "Платежи";
+            treeNode108.Text = "Платежи";
+            treeNode109.Name = "Приёмы врачей";
+            treeNode109.Text = "Приёмы врачей";
+            treeNode110.Name = "Рецепты";
+            treeNode110.Text = "Рецепты";
+            treeNode111.Name = "Специальности";
+            treeNode111.Text = "Специальности";
+            treeNode112.Name = "Таблицы";
+            treeNode112.Text = "Таблицы";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode16});
+            treeNode112});
             this.treeView1.Size = new System.Drawing.Size(151, 397);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -175,28 +176,36 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.42453F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.57547F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.39063F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.60938F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
             this.tableLayoutPanel3.Controls.Add(this.buttonAddition, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonEndEdit, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonCancelEdit, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonEdit, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonCancelEdit, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonEndEdit, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonDelete, 2, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(770, 26);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(776, 26);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // buttonAddition
             // 
+            this.buttonAddition.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddition.Location = new System.Drawing.Point(3, 3);
             this.buttonAddition.Name = "buttonAddition";
-            this.buttonAddition.Size = new System.Drawing.Size(120, 20);
+            this.buttonAddition.Size = new System.Drawing.Size(131, 20);
             this.buttonAddition.TabIndex = 0;
             this.buttonAddition.Text = "Добавить запись";
             this.buttonAddition.UseVisualStyleBackColor = true;
@@ -204,9 +213,12 @@
             // 
             // buttonEndEdit
             // 
-            this.buttonEndEdit.Location = new System.Drawing.Point(427, 3);
+            this.buttonEndEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEndEdit.Location = new System.Drawing.Point(440, 3);
             this.buttonEndEdit.Name = "buttonEndEdit";
-            this.buttonEndEdit.Size = new System.Drawing.Size(169, 20);
+            this.buttonEndEdit.Size = new System.Drawing.Size(170, 20);
             this.buttonEndEdit.TabIndex = 1;
             this.buttonEndEdit.Text = "Завершить редактирование";
             this.buttonEndEdit.UseVisualStyleBackColor = true;
@@ -214,13 +226,29 @@
             // 
             // buttonCancelEdit
             // 
-            this.buttonCancelEdit.Location = new System.Drawing.Point(605, 3);
+            this.buttonCancelEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelEdit.Location = new System.Drawing.Point(616, 3);
             this.buttonCancelEdit.Name = "buttonCancelEdit";
-            this.buttonCancelEdit.Size = new System.Drawing.Size(154, 20);
+            this.buttonCancelEdit.Size = new System.Drawing.Size(157, 20);
             this.buttonCancelEdit.TabIndex = 2;
             this.buttonCancelEdit.Text = "Отменить редактирование";
             this.buttonCancelEdit.UseVisualStyleBackColor = true;
             this.buttonCancelEdit.Click += new System.EventHandler(this.buttonCancelEdit_Click);
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEdit.Location = new System.Drawing.Point(140, 3);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(129, 20);
+            this.buttonEdit.TabIndex = 3;
+            this.buttonEdit.Text = "Изменить запись";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // поликлиникаDataSetBindingSource
             // 
@@ -232,15 +260,18 @@
             this.поликлиникаDataSet.DataSetName = "ПоликлиникаDataSet";
             this.поликлиникаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // buttonEdit
+            // buttonDelete
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(132, 3);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(128, 20);
-            this.buttonEdit.TabIndex = 3;
-            this.buttonEdit.Text = "Изменить запись";
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDelete.Location = new System.Drawing.Point(275, 3);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(159, 20);
+            this.buttonDelete.TabIndex = 4;
+            this.buttonDelete.Text = "Удалить запись";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // MainWindow
             // 
@@ -273,6 +304,7 @@
         private System.Windows.Forms.Button buttonEndEdit;
         private System.Windows.Forms.Button buttonCancelEdit;
         private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
 
