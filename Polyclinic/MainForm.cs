@@ -214,7 +214,36 @@ namespace Polyclinic
 
         private void buttonEndEdit_Click_1(object sender, EventArgs e)
         {
+            if (dataGridView1.DataSource is DataTable dataTable)
+            {
+                // Получаем последнюю добавленную строку
+                DataRow currentRow = dataTable.Rows[dataTable.Rows.Count - 1];
 
+                try
+                {
+                    string tableName = treeView1.SelectedNode.Text.Replace(" ", "_");
+
+                    // Сохраняем в БД - если будет исключение, код ниже не выполнится
+                    query.SaveChangesToDB(dataTable, tableName);
+
+                    // Только если SaveChangesToDB выполнилось без исключений:
+                    dataGridView1.EndEdit();
+                    ButtonDisabled();
+
+                }
+                catch (OleDbException ex)
+                {
+                    string errorMessage = "Ошибка базы данных:\n";
+                    foreach (OleDbError error in ex.Errors)
+                    {
+                        errorMessage += $"- {error.Message}\n";
+                    }
+                    MessageBox.Show(errorMessage, "Ошибка сохранения",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    ButtonEnabled();
+                }
+            }
         }
 
         private void buttonCancelEdit_Click_1(object sender, EventArgs e)
