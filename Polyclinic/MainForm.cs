@@ -257,6 +257,14 @@ namespace Polyclinic
             }
         }
 
-       
+        private void записиВМедкартеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void оплаченныеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           query.PaymentsQuery("оплачено");
+        }
     }
 }

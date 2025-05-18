@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Polyclinic
@@ -59,6 +60,31 @@ namespace Polyclinic
 
 
             }   
+        }
+
+        public DataTable PaymentsQuery(string type)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = $"SELECT * FROM Платежи WHERE Статус_оплаты = {type}";
+                    
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
+                   
+                    adapter.Fill(dataTable);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке  платежей: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dataTable;
         }
     }
 }
