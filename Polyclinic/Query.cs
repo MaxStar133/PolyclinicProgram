@@ -124,5 +124,36 @@ namespace Polyclinic
 
             return dataTable;
         }
+
+     public DataTable GenderQuery(string type)
+        {
+            DataTable dataTable = new DataTable();
+
+            if (string.IsNullOrEmpty(type))
+            {
+                MessageBox.Show("Статус не указан", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return dataTable;
+            }
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = $"SELECT * FROM Пациенты WHERE Пол = '{type.Replace("'", "''")}'";
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
+                    adapter.Fill(dataTable);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dataTable;
+        }
     }
 }

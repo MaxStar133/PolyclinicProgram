@@ -298,5 +298,19 @@ namespace Polyclinic
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = data;
         }
+
+        private void мужчиныToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable data = query.GenderQuery("М");
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = data;        
+        }
+
+        private void женщиныToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable data = query.GenderQuery("Ж");
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = data;
+        }
     }
 }
