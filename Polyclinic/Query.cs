@@ -193,13 +193,91 @@ namespace Polyclinic
 
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
-                // Добавляем параметры с подстановкой % для LIKE
                 cmd.Parameters.AddWithValue("", $"%{surName}%");
                 cmd.Parameters.AddWithValue("", $"%{firstName}%");
                 cmd.Parameters.AddWithValue("", $"%{middleName}%");
 
                 OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
                 adapter.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public DataTable GetMedicalRecordsByFIO(string surName, string firstName, string middleName)
+        {
+            DataTable dt = new DataTable();
+
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            {
+                
+                    string query = @"SELECT Записи_в_медкарте.*
+                                    FROM (Записи_в_медкарте
+                                    INNER JOIN МедКарты ON Записи_в_медкарте.Id_медкарты = МедКарты.Id_медкарты)
+                                    INNER JOIN Пациенты ON МедКарты.Id_пациента = Пациенты.Id_пациента
+                                    WHERE Пациенты.Фамилия LIKE ?
+                                    AND Пациенты.Имя LIKE ?
+                                    AND Пациенты.Отчество LIKE ?";
+        
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+              
+                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{firstName}%");
+                cmd.Parameters.AddWithValue("", $"%{middleName}%");
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(dt);
+
+                    Console.WriteLine($"Найдено записей: {dt.Rows.Count}");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            return dt;
+        }
+
+         public DataTable GetMakeAnAppointment(string surName, string firstName, string middleName)
+        {
+            DataTable dt = new DataTable();
+
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            {
+
+                string query = @"SELECT Запись_на_приём.*
+                                FROM (Запись_на_приём
+                                INNER JOIN Пациенты ON Запись_на_приём.Id_пациента = Пациенты.Id_пациента)
+                                WHERE Пациенты.Фамилия LIKE ?
+                                AND Пациенты.Имя LIKE ?
+                                AND Пациенты.Отчество LIKE ?";
+
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+
+                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{firstName}%");
+                cmd.Parameters.AddWithValue("", $"%{middleName}%");
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(dt);
+
+                    Console.WriteLine($"Найдено записей: {dt.Rows.Count}");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             return dt;

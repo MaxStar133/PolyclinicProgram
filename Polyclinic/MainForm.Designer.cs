@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode129 = new System.Windows.Forms.TreeNode("Врачи");
-            System.Windows.Forms.TreeNode treeNode130 = new System.Windows.Forms.TreeNode("Диагнозы");
-            System.Windows.Forms.TreeNode treeNode131 = new System.Windows.Forms.TreeNode("Записи в медкарте");
-            System.Windows.Forms.TreeNode treeNode132 = new System.Windows.Forms.TreeNode("Запись на приём");
-            System.Windows.Forms.TreeNode treeNode133 = new System.Windows.Forms.TreeNode("Кабинеты");
-            System.Windows.Forms.TreeNode treeNode134 = new System.Windows.Forms.TreeNode("Лекарства");
-            System.Windows.Forms.TreeNode treeNode135 = new System.Windows.Forms.TreeNode("Медицинские услуги");
-            System.Windows.Forms.TreeNode treeNode136 = new System.Windows.Forms.TreeNode("Медкарты");
-            System.Windows.Forms.TreeNode treeNode137 = new System.Windows.Forms.TreeNode("Оказанные услуги");
-            System.Windows.Forms.TreeNode treeNode138 = new System.Windows.Forms.TreeNode("Отделения");
-            System.Windows.Forms.TreeNode treeNode139 = new System.Windows.Forms.TreeNode("Пациенты");
-            System.Windows.Forms.TreeNode treeNode140 = new System.Windows.Forms.TreeNode("Платежи");
-            System.Windows.Forms.TreeNode treeNode141 = new System.Windows.Forms.TreeNode("Приёмы врачей");
-            System.Windows.Forms.TreeNode treeNode142 = new System.Windows.Forms.TreeNode("Рецепты");
-            System.Windows.Forms.TreeNode treeNode143 = new System.Windows.Forms.TreeNode("Специальности");
-            System.Windows.Forms.TreeNode treeNode144 = new System.Windows.Forms.TreeNode("Таблицы", new System.Windows.Forms.TreeNode[] {
-            treeNode129,
-            treeNode130,
-            treeNode131,
-            treeNode132,
-            treeNode133,
-            treeNode134,
-            treeNode135,
-            treeNode136,
-            treeNode137,
-            treeNode138,
-            treeNode139,
-            treeNode140,
-            treeNode141,
-            treeNode142,
-            treeNode143});
+            System.Windows.Forms.TreeNode treeNode161 = new System.Windows.Forms.TreeNode("Врачи");
+            System.Windows.Forms.TreeNode treeNode162 = new System.Windows.Forms.TreeNode("Диагнозы");
+            System.Windows.Forms.TreeNode treeNode163 = new System.Windows.Forms.TreeNode("Записи в медкарте");
+            System.Windows.Forms.TreeNode treeNode164 = new System.Windows.Forms.TreeNode("Запись на приём");
+            System.Windows.Forms.TreeNode treeNode165 = new System.Windows.Forms.TreeNode("Кабинеты");
+            System.Windows.Forms.TreeNode treeNode166 = new System.Windows.Forms.TreeNode("Лекарства");
+            System.Windows.Forms.TreeNode treeNode167 = new System.Windows.Forms.TreeNode("Медицинские услуги");
+            System.Windows.Forms.TreeNode treeNode168 = new System.Windows.Forms.TreeNode("Медкарты");
+            System.Windows.Forms.TreeNode treeNode169 = new System.Windows.Forms.TreeNode("Оказанные услуги");
+            System.Windows.Forms.TreeNode treeNode170 = new System.Windows.Forms.TreeNode("Отделения");
+            System.Windows.Forms.TreeNode treeNode171 = new System.Windows.Forms.TreeNode("Пациенты");
+            System.Windows.Forms.TreeNode treeNode172 = new System.Windows.Forms.TreeNode("Платежи");
+            System.Windows.Forms.TreeNode treeNode173 = new System.Windows.Forms.TreeNode("Приёмы врачей");
+            System.Windows.Forms.TreeNode treeNode174 = new System.Windows.Forms.TreeNode("Рецепты");
+            System.Windows.Forms.TreeNode treeNode175 = new System.Windows.Forms.TreeNode("Специальности");
+            System.Windows.Forms.TreeNode treeNode176 = new System.Windows.Forms.TreeNode("Таблицы", new System.Windows.Forms.TreeNode[] {
+            treeNode161,
+            treeNode162,
+            treeNode163,
+            treeNode164,
+            treeNode165,
+            treeNode166,
+            treeNode167,
+            treeNode168,
+            treeNode169,
+            treeNode170,
+            treeNode171,
+            treeNode172,
+            treeNode173,
+            treeNode174,
+            treeNode175});
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -149,40 +149,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode129.Name = "Врачи";
-            treeNode129.Text = "Врачи";
-            treeNode130.Name = "Диагнозы";
-            treeNode130.Text = "Диагнозы";
-            treeNode131.Name = "Записи в медкарте";
-            treeNode131.Text = "Записи в медкарте";
-            treeNode132.Name = "Запись на приём";
-            treeNode132.Text = "Запись на приём";
-            treeNode133.Name = "Кабинеты";
-            treeNode133.Text = "Кабинеты";
-            treeNode134.Name = "Лекарства";
-            treeNode134.Text = "Лекарства";
-            treeNode135.Name = "Медицинские услуги";
-            treeNode135.Text = "Медицинские услуги";
-            treeNode136.Name = "Медкарты";
-            treeNode136.Text = "Медкарты";
-            treeNode137.Name = "Оказанные услуги";
-            treeNode137.Text = "Оказанные услуги";
-            treeNode138.Name = "Отделения";
-            treeNode138.Text = "Отделения";
-            treeNode139.Name = "Пациенты";
-            treeNode139.Text = "Пациенты";
-            treeNode140.Name = "Платежи";
-            treeNode140.Text = "Платежи";
-            treeNode141.Name = "Приёмы врачей";
-            treeNode141.Text = "Приёмы врачей";
-            treeNode142.Name = "Рецепты";
-            treeNode142.Text = "Рецепты";
-            treeNode143.Name = "Специальности";
-            treeNode143.Text = "Специальности";
-            treeNode144.Name = "Tables";
-            treeNode144.Text = "Таблицы";
+            treeNode161.Name = "Врачи";
+            treeNode161.Text = "Врачи";
+            treeNode162.Name = "Диагнозы";
+            treeNode162.Text = "Диагнозы";
+            treeNode163.Name = "Записи в медкарте";
+            treeNode163.Text = "Записи в медкарте";
+            treeNode164.Name = "Запись на приём";
+            treeNode164.Text = "Запись на приём";
+            treeNode165.Name = "Кабинеты";
+            treeNode165.Text = "Кабинеты";
+            treeNode166.Name = "Лекарства";
+            treeNode166.Text = "Лекарства";
+            treeNode167.Name = "Медицинские услуги";
+            treeNode167.Text = "Медицинские услуги";
+            treeNode168.Name = "Медкарты";
+            treeNode168.Text = "Медкарты";
+            treeNode169.Name = "Оказанные услуги";
+            treeNode169.Text = "Оказанные услуги";
+            treeNode170.Name = "Отделения";
+            treeNode170.Text = "Отделения";
+            treeNode171.Name = "Пациенты";
+            treeNode171.Text = "Пациенты";
+            treeNode172.Name = "Платежи";
+            treeNode172.Text = "Платежи";
+            treeNode173.Name = "Приёмы врачей";
+            treeNode173.Text = "Приёмы врачей";
+            treeNode174.Name = "Рецепты";
+            treeNode174.Text = "Рецепты";
+            treeNode175.Name = "Специальности";
+            treeNode175.Text = "Специальности";
+            treeNode176.Name = "Tables";
+            treeNode176.Text = "Таблицы";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode144});
+            treeNode176});
             this.treeView1.Size = new System.Drawing.Size(192, 456);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -317,8 +317,9 @@
             // записиНаПриёмToolStripMenuItem
             // 
             this.записиНаПриёмToolStripMenuItem.Name = "записиНаПриёмToolStripMenuItem";
-            this.записиНаПриёмToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.записиНаПриёмToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.записиНаПриёмToolStripMenuItem.Text = "Записи на приём";
+            this.записиНаПриёмToolStripMenuItem.Click += new System.EventHandler(this.записиНаПриёмToolStripMenuItem_Click);
             // 
             // рецептыToolStripMenuItem
             // 
