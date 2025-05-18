@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.OleDb;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Polyclinic
@@ -123,7 +124,7 @@ namespace Polyclinic
             }
 
         }
-       
+
         private void ButtonEnabled()
         {
             buttonAddition.Enabled = false;
@@ -141,7 +142,7 @@ namespace Polyclinic
             buttonCancelEdit.Enabled = false;
         }
 
-       
+
 
         private void buttonAddition_Click_1(object sender, EventArgs e)
         {
@@ -220,5 +221,42 @@ namespace Polyclinic
         {
 
         }
+
+        private void файлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+
+                // Устанавливаем фильтр только для файлов .mdb (Access)
+                openFileDialog.Filter = "Файлы баз данных (*.mdb)|*.mdb|Все файлы (*.*)|*.*";
+                openFileDialog.FilterIndex = 1; // По умолчанию выбираем .mdb файлы
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedFilePath = openFileDialog.FileName;
+
+                    // Проверяем расширение файла (дополнительная проверка)
+                    if (Path.GetExtension(selectedFilePath).ToLower() == ".mdb")
+                    {
+                        // Здесь можно использовать выбранный файл .mdb
+                        MessageBox.Show($"Выбран файл БД: {selectedFilePath}",
+                                      "Файл выбран",
+                                      MessageBoxButtons.OK,
+                                      MessageBoxIcon.Information);
+
+                        query.SetConnectionString(selectedFilePath);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Пожалуйста, выберите файл с расширением .mdb",
+                                      "Неверный формат",
+                                      MessageBoxButtons.OK,
+                                      MessageBoxIcon.Warning);
+                    }
+                }
+            }
+        }
+
+       
     }
 }

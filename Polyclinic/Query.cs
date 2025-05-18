@@ -7,8 +7,12 @@ namespace Polyclinic
 {
     public class Query
     {
-        private string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""C:\Users\ov4in\OneDrive\Рабочий стол\К.р. проект. бд\Поликлиника.mdb"";Persist Security Info=False;";
+        private string connectionString;
 
+        public void SetConnectionString(string path)
+        {
+            connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""{path}"";Persist Security Info=False;";
+        }
         public DataTable GetData(string dataQuery)
         {
             DataTable dataTable = new DataTable();
