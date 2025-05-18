@@ -65,25 +65,63 @@ namespace Polyclinic
         public DataTable PaymentsQuery(string type)
         {
             DataTable dataTable = new DataTable();
+
+            if (string.IsNullOrEmpty(type))
+            {
+                MessageBox.Show("Статус оплаты не указан", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return dataTable;
+            }
+
             try
             {
                 using (OleDbConnection connection = new OleDbConnection(connectionString))
                 {
                     connection.Open();
 
-                    string query = $"SELECT * FROM Платежи WHERE Статус_оплаты = {type}";
-                    
+                 
+                    string query = $"SELECT * FROM Платежи WHERE Статус_оплаты = '{type.Replace("'", "''")}'";
+
                     OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
-                   
                     adapter.Fill(dataTable);
-                    
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке  платежей: {ex.Message}", "Ошибка",
+                MessageBox.Show($"Ошибка при загрузке платежей: {ex.Message}", "Ошибка",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            return dataTable;
+        }
+
+        public DataTable MakeAnAppointmentQuery(string type)
+        {
+            DataTable dataTable = new DataTable();
+
+            if (string.IsNullOrEmpty(type))
+            {
+                MessageBox.Show("Статус не указан", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return dataTable;
+            }
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = $"SELECT * FROM Запись_на_приём WHERE Статус = '{type.Replace("'", "''")}'";
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
+                    adapter.Fill(dataTable);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             return dataTable;
         }
     }

@@ -20,9 +20,9 @@ namespace Polyclinic
             ButtonDisabled();
             if (e.Node.Text == "Врачи")
             {
-                DataTable patientsData = query.GetData("Врачи");
+                DataTable data = query.GetData("Врачи");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Диагнозы")
@@ -286,10 +286,17 @@ namespace Polyclinic
         {
 
         }
-
+        
         private void оплаченныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           query.PaymentsQuery("оплачено");
+           query.PaymentsQuery("Оплачено");
+        }
+
+        private void зToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable data = query.MakeAnAppointmentQuery("Завершён");
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = data;
         }
     }
 }
