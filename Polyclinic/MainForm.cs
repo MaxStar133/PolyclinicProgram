@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.IO;
 using System.Windows.Forms;
+using ParametricQuery;
 
 namespace Polyclinic
 {
@@ -289,12 +290,39 @@ namespace Polyclinic
         
         private void оплаченныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           query.PaymentsQuery("Оплачено");
+            DataTable data = query.PaymentsQuery("Оплачено");
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = data;
+        }
+        private void неоплаченныеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable data = query.PaymentsQuery("Не оплачено");
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = data;
+        }
+        private void ожидаютсяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable data = query.PaymentsQuery("Ожидается");
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = data;
         }
 
         private void зToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable data = query.MakeAnAppointmentQuery("Завершён");
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = data;
+        }
+        private void отменённыеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable data = query.MakeAnAppointmentQuery("Отменён");
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = data;
+        }
+
+        private void ожидаютсяToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DataTable data = query.MakeAnAppointmentQuery("Запланирован");
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = data;
         }
@@ -312,5 +340,31 @@ namespace Polyclinic
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = data;
         }
+
+        private void поискПоФИОToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var searchForm = new ParametricWindow())
+            {
+                if (searchForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Получаем введенные данные
+                    string lastName = searchForm.SurName;
+                    string firstName = searchForm.FirstName;
+                    string middleName = searchForm.MiddleName;
+
+                    try
+                    {
+                        DataTable result = query.GetPatientsByFIO(lastName, firstName, middleName);
+                        dataGridView1.DataSource = result;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
+ 

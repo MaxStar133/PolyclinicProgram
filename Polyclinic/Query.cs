@@ -155,5 +155,29 @@ namespace Polyclinic
 
             return dataTable;
         }
+        public DataTable GetPatientsByFIO(string surName, string firstName, string middleName)
+        {
+            DataTable dt = new DataTable();
+
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            {
+                string query = @"SELECT * FROM Пациенты 
+                         WHERE Фамилия LIKE ? 
+                         AND  Имя LIKE ? 
+                         AND Отчество LIKE ?";
+
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                // Добавляем параметры с подстановкой % для LIKE
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{firstName}%");
+                cmd.Parameters.AddWithValue("", $"%{middleName}%");
+
+                OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+
+            return dt;
+        }
     }
 }
