@@ -123,8 +123,27 @@ namespace Polyclinic
             }
 
         }
+       
+        private void ButtonEnabled()
+        {
+            buttonAddition.Enabled = false;
+            buttonEdit.Enabled = false;
+            buttonDelete.Enabled = false;
+            buttonEndEdit.Enabled = true;
+            buttonCancelEdit.Enabled = true;
+        }
+        private void ButtonDisabled()
+        {
+            buttonEdit.Enabled = true;
+            buttonAddition.Enabled = true;
+            buttonDelete.Enabled = true;
+            buttonEndEdit.Enabled = false;
+            buttonCancelEdit.Enabled = false;
+        }
 
-        private void buttonAddition_Click(object sender, EventArgs e)
+       
+
+        private void buttonAddition_Click_1(object sender, EventArgs e)
         {
             if (dataGridView1.DataSource is DataTable dataTable)
             {
@@ -145,52 +164,7 @@ namespace Polyclinic
             }
         }
 
-        private void buttonEndEdit_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.DataSource is DataTable dataTable)
-            {
-                // Получаем последнюю добавленную строку
-                DataRow currentRow = dataTable.Rows[dataTable.Rows.Count - 1];
-
-                try
-                {
-                    string tableName = treeView1.SelectedNode.Text.Replace(" ", "_");
-
-                    // Сохраняем в БД - если будет исключение, код ниже не выполнится
-                    query.SaveChangesToDB(dataTable, tableName);
-
-                    // Только если SaveChangesToDB выполнилось без исключений:
-                    dataGridView1.EndEdit();
-                    ButtonDisabled();
-
-                }
-                catch (OleDbException ex)
-                {
-                    string errorMessage = "Ошибка базы данных:\n";
-                    foreach (OleDbError error in ex.Errors)
-                    {
-                        errorMessage += $"- {error.Message}\n";
-                    }
-                    MessageBox.Show(errorMessage, "Ошибка сохранения",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    ButtonEnabled();
-                }
-            }
-        }
-
-        private void buttonCancelEdit_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.DataSource is DataTable dataTable)
-            {
-                // Отменяем изменения
-                dataTable.RejectChanges();
-
-                ButtonDisabled();
-            }
-        }
-
-        private void buttonEdit_Click(object sender, EventArgs e)
+        private void buttonEdit_Click_1(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
@@ -206,24 +180,7 @@ namespace Polyclinic
             ButtonEnabled();
         }
 
-        private void ButtonEnabled()
-        {
-            buttonAddition.Enabled = false;
-            buttonEdit.Enabled = false;
-            buttonDelete.Enabled = false;
-            buttonEndEdit.Enabled = true;
-            buttonCancelEdit.Enabled = true;
-        }
-        private void ButtonDisabled()
-        {
-            buttonEdit.Enabled = true;
-            buttonAddition.Enabled = true;
-            buttonDelete.Enabled = true;
-            buttonEndEdit.Enabled = false;
-            buttonCancelEdit.Enabled = false;
-        }
-
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void buttonDelete_Click_1(object sender, EventArgs e)
         {
             // Проверяем, что есть выбранная строка
             if (dataGridView1.SelectedRows.Count == 0) return;
@@ -252,6 +209,16 @@ namespace Polyclinic
                     dataTable.RejectChanges(); // Откатываем изменения при ошибке
                 }
             }
+        }
+
+        private void buttonEndEdit_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCancelEdit_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
