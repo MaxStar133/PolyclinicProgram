@@ -237,7 +237,7 @@
             this.buttonAddition.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.buttonAddition.Size = new System.Drawing.Size(249, 22);
             this.buttonAddition.Text = "Добавить запись";
-            this.buttonAddition.Click += new System.EventHandler(this.buttonAddition_Click_1);
+            this.buttonAddition.Click += new System.EventHandler(this.buttonAddition_Click);
             // 
             // buttonEdit
             // 
@@ -245,7 +245,7 @@
             this.buttonEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
             this.buttonEdit.Size = new System.Drawing.Size(249, 22);
             this.buttonEdit.Text = "Изменить запись";
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click_1);
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDelete
             // 
@@ -253,7 +253,7 @@
             this.buttonDelete.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Delete)));
             this.buttonDelete.Size = new System.Drawing.Size(249, 22);
             this.buttonDelete.Text = "Удалить запись";
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click_1);
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonEndEdit
             // 
@@ -261,6 +261,7 @@
             this.buttonEndEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.buttonEndEdit.Size = new System.Drawing.Size(249, 22);
             this.buttonEndEdit.Text = "Завершить изменения";
+            this.buttonEndEdit.Click += new System.EventHandler(this.buttonEndEdit_Click);
             // 
             // buttonCancelEdit
             // 
@@ -268,6 +269,7 @@
             this.buttonCancelEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.buttonCancelEdit.Size = new System.Drawing.Size(249, 22);
             this.buttonCancelEdit.Text = "Отменить завершения";
+            this.buttonCancelEdit.Click += new System.EventHandler(this.buttonCancelEdit_Click);
             // 
             // запросыToolStripMenuItem
             // 
