@@ -65,16 +65,38 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Record = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonAddition = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonEndEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonCancelEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пациентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискПоФИОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.записиВМедкартеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.записиНаПриёмToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.рецептыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оказанныеУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.платежиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискВрачаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискПоФИОToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.приёмыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оказанныеУслугиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.неоплаченныеПлатежиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оплаченныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.неоплаченныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ожидаютсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.кабинетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поликлиникаDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.поликлиникаDataSet = new Polyclinic.ПоликлиникаDataSet();
-            this.запросыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.свободныеКабинетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.записиНаПриёмToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.зToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отменённыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ожидаютсяToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискПоОтделениюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -190,6 +212,13 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // файлToolStripMenuItem
+            // 
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem.Text = "Файл";
+            this.файлToolStripMenuItem.Click += new System.EventHandler(this.файлToolStripMenuItem_Click);
+            // 
             // Record
             // 
             this.Record.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -240,6 +269,132 @@
             this.buttonCancelEdit.Size = new System.Drawing.Size(249, 22);
             this.buttonCancelEdit.Text = "Отменить завершения";
             // 
+            // запросыToolStripMenuItem
+            // 
+            this.запросыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.пациентToolStripMenuItem,
+            this.поискВрачаToolStripMenuItem,
+            this.неоплаченныеПлатежиToolStripMenuItem,
+            this.кабинетыToolStripMenuItem,
+            this.записиНаПриёмToolStripMenuItem1});
+            this.запросыToolStripMenuItem.Name = "запросыToolStripMenuItem";
+            this.запросыToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.запросыToolStripMenuItem.Text = "Запросы";
+            // 
+            // пациентToolStripMenuItem
+            // 
+            this.пациентToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поискПоФИОToolStripMenuItem,
+            this.записиВМедкартеToolStripMenuItem,
+            this.записиНаПриёмToolStripMenuItem,
+            this.рецептыToolStripMenuItem,
+            this.оказанныеУслугиToolStripMenuItem,
+            this.платежиToolStripMenuItem});
+            this.пациентToolStripMenuItem.Name = "пациентToolStripMenuItem";
+            this.пациентToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.пациентToolStripMenuItem.Text = "Пациент";
+            // 
+            // поискПоФИОToolStripMenuItem
+            // 
+            this.поискПоФИОToolStripMenuItem.Name = "поискПоФИОToolStripMenuItem";
+            this.поискПоФИОToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.поискПоФИОToolStripMenuItem.Text = "Поиск по ФИО";
+            // 
+            // записиВМедкартеToolStripMenuItem
+            // 
+            this.записиВМедкартеToolStripMenuItem.Name = "записиВМедкартеToolStripMenuItem";
+            this.записиВМедкартеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.записиВМедкартеToolStripMenuItem.Text = "Записи в медкарте";
+            // 
+            // записиНаПриёмToolStripMenuItem
+            // 
+            this.записиНаПриёмToolStripMenuItem.Name = "записиНаПриёмToolStripMenuItem";
+            this.записиНаПриёмToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.записиНаПриёмToolStripMenuItem.Text = "Записи на приём";
+            // 
+            // рецептыToolStripMenuItem
+            // 
+            this.рецептыToolStripMenuItem.Name = "рецептыToolStripMenuItem";
+            this.рецептыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.рецептыToolStripMenuItem.Text = "Рецепты";
+            // 
+            // оказанныеУслугиToolStripMenuItem
+            // 
+            this.оказанныеУслугиToolStripMenuItem.Name = "оказанныеУслугиToolStripMenuItem";
+            this.оказанныеУслугиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оказанныеУслугиToolStripMenuItem.Text = "Оказанные услуги";
+            // 
+            // платежиToolStripMenuItem
+            // 
+            this.платежиToolStripMenuItem.Name = "платежиToolStripMenuItem";
+            this.платежиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.платежиToolStripMenuItem.Text = "Платежи";
+            // 
+            // поискВрачаToolStripMenuItem
+            // 
+            this.поискВрачаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поискПоФИОToolStripMenuItem1,
+            this.приёмыToolStripMenuItem,
+            this.оказанныеУслугиToolStripMenuItem1});
+            this.поискВрачаToolStripMenuItem.Name = "поискВрачаToolStripMenuItem";
+            this.поискВрачаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.поискВрачаToolStripMenuItem.Text = "Врач";
+            // 
+            // поискПоФИОToolStripMenuItem1
+            // 
+            this.поискПоФИОToolStripMenuItem1.Name = "поискПоФИОToolStripMenuItem1";
+            this.поискПоФИОToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.поискПоФИОToolStripMenuItem1.Text = "Поиск по ФИО";
+            // 
+            // приёмыToolStripMenuItem
+            // 
+            this.приёмыToolStripMenuItem.Name = "приёмыToolStripMenuItem";
+            this.приёмыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.приёмыToolStripMenuItem.Text = "Приёмы";
+            // 
+            // оказанныеУслугиToolStripMenuItem1
+            // 
+            this.оказанныеУслугиToolStripMenuItem1.Name = "оказанныеУслугиToolStripMenuItem1";
+            this.оказанныеУслугиToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.оказанныеУслугиToolStripMenuItem1.Text = "Оказанные услуги";
+            // 
+            // неоплаченныеПлатежиToolStripMenuItem
+            // 
+            this.неоплаченныеПлатежиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.оплаченныеToolStripMenuItem,
+            this.неоплаченныеToolStripMenuItem,
+            this.ожидаютсяToolStripMenuItem});
+            this.неоплаченныеПлатежиToolStripMenuItem.Name = "неоплаченныеПлатежиToolStripMenuItem";
+            this.неоплаченныеПлатежиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.неоплаченныеПлатежиToolStripMenuItem.Text = "Платежи";
+            // 
+            // оплаченныеToolStripMenuItem
+            // 
+            this.оплаченныеToolStripMenuItem.Name = "оплаченныеToolStripMenuItem";
+            this.оплаченныеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оплаченныеToolStripMenuItem.Text = "Оплаченные";
+            // 
+            // неоплаченныеToolStripMenuItem
+            // 
+            this.неоплаченныеToolStripMenuItem.Name = "неоплаченныеToolStripMenuItem";
+            this.неоплаченныеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.неоплаченныеToolStripMenuItem.Text = "Неоплаченные";
+            // 
+            // ожидаютсяToolStripMenuItem
+            // 
+            this.ожидаютсяToolStripMenuItem.Name = "ожидаютсяToolStripMenuItem";
+            this.ожидаютсяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ожидаютсяToolStripMenuItem.Text = "Ожидаются";
+            // 
+            // кабинетыToolStripMenuItem
+            // 
+            this.кабинетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.свободныеКабинетыToolStripMenuItem,
+            this.поискПоОтделениюToolStripMenuItem});
+            this.кабинетыToolStripMenuItem.Name = "кабинетыToolStripMenuItem";
+            this.кабинетыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.кабинетыToolStripMenuItem.Text = "Кабинеты";
+            // 
             // поликлиникаDataSetBindingSource
             // 
             this.поликлиникаDataSetBindingSource.DataSource = this.поликлиникаDataSet;
@@ -250,18 +405,45 @@
             this.поликлиникаDataSet.DataSetName = "ПоликлиникаDataSet";
             this.поликлиникаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // запросыToolStripMenuItem
+            // свободныеКабинетыToolStripMenuItem
             // 
-            this.запросыToolStripMenuItem.Name = "запросыToolStripMenuItem";
-            this.запросыToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.запросыToolStripMenuItem.Text = "Запросы";
+            this.свободныеКабинетыToolStripMenuItem.Name = "свободныеКабинетыToolStripMenuItem";
+            this.свободныеКабинетыToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.свободныеКабинетыToolStripMenuItem.Text = "Свободные кабинеты";
             // 
-            // файлToolStripMenuItem
+            // записиНаПриёмToolStripMenuItem1
             // 
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
-            this.файлToolStripMenuItem.Click += new System.EventHandler(this.файлToolStripMenuItem_Click);
+            this.записиНаПриёмToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.зToolStripMenuItem,
+            this.отменённыеToolStripMenuItem,
+            this.ожидаютсяToolStripMenuItem1});
+            this.записиНаПриёмToolStripMenuItem1.Name = "записиНаПриёмToolStripMenuItem1";
+            this.записиНаПриёмToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.записиНаПриёмToolStripMenuItem1.Text = "Записи на приём";
+            // 
+            // зToolStripMenuItem
+            // 
+            this.зToolStripMenuItem.Name = "зToolStripMenuItem";
+            this.зToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.зToolStripMenuItem.Text = "Завершённые";
+            // 
+            // отменённыеToolStripMenuItem
+            // 
+            this.отменённыеToolStripMenuItem.Name = "отменённыеToolStripMenuItem";
+            this.отменённыеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отменённыеToolStripMenuItem.Text = "Отменённые";
+            // 
+            // ожидаютсяToolStripMenuItem1
+            // 
+            this.ожидаютсяToolStripMenuItem1.Name = "ожидаютсяToolStripMenuItem1";
+            this.ожидаютсяToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ожидаютсяToolStripMenuItem1.Text = "Ожидаются";
+            // 
+            // поискПоОтделениюToolStripMenuItem
+            // 
+            this.поискПоОтделениюToolStripMenuItem.Name = "поискПоОтделениюToolStripMenuItem";
+            this.поискПоОтделениюToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.поискПоОтделениюToolStripMenuItem.Text = "Поиск по отделению";
             // 
             // MainWindow
             // 
@@ -301,6 +483,28 @@
         private System.Windows.Forms.ToolStripMenuItem buttonCancelEdit;
         private System.Windows.Forms.ToolStripMenuItem запросыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискВрачаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem пациентToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискПоФИОToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem записиВМедкартеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оказанныеУслугиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem записиНаПриёмToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem платежиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem рецептыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискПоФИОToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem приёмыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оказанныеУслугиToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem неоплаченныеПлатежиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оплаченныеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem неоплаченныеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ожидаютсяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem кабинетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem свободныеКабинетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem записиНаПриёмToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem зToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискПоОтделениюToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отменённыеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ожидаютсяToolStripMenuItem1;
     }
 }
 
