@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42824807-571A-482E-8083-39788BECD813}</ProjectGuid>
+    <ProjectGuid>{D4B310AA-FFDF-44D6-9B60-A7CE8511156E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Polyclinic</RootNamespace>
-    <AssemblyName>Polyclinic</AssemblyName>
+    <RootNamespace>ParametricQuery</RootNamespace>
+    <AssemblyName>ParametricQuery</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,22 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="ParametricWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="ParametricWindow.Designer.cs">
+      <DependentUpon>ParametricWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Query.cs" />
-    <Compile Include="ПоликлиникаDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ПоликлиникаDataSet.xsd</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="ParametricWindow.resx">
+      <DependentUpon>ParametricWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,26 +75,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ПоликлиникаDataSet.xsc">
-      <DependentUpon>ПоликлиникаDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ПоликлиникаDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ПоликлиникаDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ПоликлиникаDataSet.xss">
-      <DependentUpon>ПоликлиникаDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ParametricQuery\ParametricQuery.csproj">
-      <Project>{d4b310aa-ffdf-44d6-9b60-a7ce8511156e}</Project>
-      <Name>ParametricQuery</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

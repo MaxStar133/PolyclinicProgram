@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Polyclinic
@@ -60,5 +61,227 @@ namespace Polyclinic
 
             }   
         }
+
+        public DataTable PaymentsQuery(string type)
+        {
+            DataTable dataTable = new DataTable();
+
+            if (string.IsNullOrEmpty(type))
+            {
+                MessageBox.Show("Статус оплаты не указан", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return dataTable;
+            }
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                 
+                    string query = $"SELECT * FROM Платежи WHERE Статус_оплаты = '{type.Replace("'", "''")}'";
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
+                    adapter.Fill(dataTable);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке платежей: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dataTable;
+        }
+
+        public DataTable MakeAnAppointmentQuery(string type)
+        {
+            DataTable dataTable = new DataTable();
+
+            if (string.IsNullOrEmpty(type))
+            {
+                MessageBox.Show("Статус не указан", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return dataTable;
+            }
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = $"SELECT * FROM Запись_на_приём WHERE Статус = '{type.Replace("'", "''")}'";
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
+                    adapter.Fill(dataTable);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dataTable;
+        }
+
+     public DataTable GenderQuery(string type)
+        {
+            DataTable dataTable = new DataTable();
+
+            if (string.IsNullOrEmpty(type))
+            {
+                MessageBox.Show("Статус не указан", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return dataTable;
+            }
+
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = $"SELECT * FROM Пациенты WHERE Пол = '{type.Replace("'", "''")}'";
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
+                    adapter.Fill(dataTable);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dataTable;
+        }
+        public DataTable GetPatientsByFIO(string surName, string firstName, string middleName)
+        {
+            DataTable dt = new DataTable();
+
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            {
+                string query = @"SELECT * FROM Пациенты 
+                         WHERE Фамилия LIKE ? 
+                         AND  Имя LIKE ? 
+                         AND Отчество LIKE ?";
+
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                // Добавляем параметры с подстановкой % для LIKE
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{firstName}%");
+                cmd.Parameters.AddWithValue("", $"%{middleName}%");
+
+                OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public DataTable GetDoctorsByFIO(string surName, string firstName, string middleName)
+        {
+            DataTable dt = new DataTable();
+
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            {
+                string query = @"SELECT * FROM Врачи 
+                         WHERE Фамилия LIKE ? 
+                         AND  Имя LIKE ? 
+                         AND Отчество LIKE ?";
+
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{firstName}%");
+                cmd.Parameters.AddWithValue("", $"%{middleName}%");
+
+                OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public DataTable GetMedicalRecordsByFIO(string surName, string firstName, string middleName)
+        {
+            DataTable dt = new DataTable();
+
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            {
+                
+                    string query = @"SELECT Записи_в_медкарте.*
+                                    FROM (Записи_в_медкарте
+                                    INNER JOIN МедКарты ON Записи_в_медкарте.Id_медкарты = МедКарты.Id_медкарты)
+                                    INNER JOIN Пациенты ON МедКарты.Id_пациента = Пациенты.Id_пациента
+                                    WHERE Пациенты.Фамилия LIKE ?
+                                    AND Пациенты.Имя LIKE ?
+                                    AND Пациенты.Отчество LIKE ?";
+        
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+              
+                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{firstName}%");
+                cmd.Parameters.AddWithValue("", $"%{middleName}%");
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(dt);
+
+                    Console.WriteLine($"Найдено записей: {dt.Rows.Count}");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            return dt;
+        }
+
+         public DataTable GetMakeAnAppointment(string surName, string firstName, string middleName)
+        {
+            DataTable dt = new DataTable();
+
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            {
+
+                string query = @"SELECT Запись_на_приём.*
+                                FROM (Запись_на_приём
+                                INNER JOIN Пациенты ON Запись_на_приём.Id_пациента = Пациенты.Id_пациента)
+                                WHERE Пациенты.Фамилия LIKE ?
+                                AND Пациенты.Имя LIKE ?
+                                AND Пациенты.Отчество LIKE ?";
+
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+
+
+                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{firstName}%");
+                cmd.Parameters.AddWithValue("", $"%{middleName}%");
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(dt);
+
+                    Console.WriteLine($"Найдено записей: {dt.Rows.Count}");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            return dt;
+        }
     }
+
 }
