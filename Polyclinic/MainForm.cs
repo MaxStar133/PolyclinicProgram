@@ -143,18 +143,18 @@ namespace Polyclinic
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void buttonEndEdit_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-              if (dataGridView1.DataSource is DataTable dataTable)
-    {
-        // Принудительно завершаем редактирование
-        if (dataGridView1.IsCurrentCellInEditMode)
-        {
-            dataGridView1.EndEdit();
-        }
+            if (dataGridView1.DataSource is DataTable dataTable)
+            {
+                // Принудительно завершаем редактирование
+                if (dataGridView1.IsCurrentCellInEditMode)
+                {
+                    dataGridView1.EndEdit();
+                }
 
-        // Получаем последнюю добавленную строку
-        DataRow currentRow = dataTable.Rows[dataTable.Rows.Count - 1];
+                // Получаем последнюю добавленную строку
+                DataRow currentRow = dataTable.Rows[dataTable.Rows.Count - 1];
                 try
                 {
                     string tableName = treeView1.SelectedNode.Text.Replace(" ", "_");
@@ -177,7 +177,8 @@ namespace Polyclinic
                 }
             }
         }
-        private void buttonCancelEdit_Click(object sender, EventArgs e)
+
+        private void button2_Click(object sender, EventArgs e)
         {
             if (dataGridView1.DataSource is DataTable dataTable)
             {
@@ -435,6 +436,8 @@ namespace Polyclinic
                 }
             }
         }
+
+    
     }
 }
  
