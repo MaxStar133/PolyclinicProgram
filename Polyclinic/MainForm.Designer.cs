@@ -215,7 +215,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.70112F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.29888F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
             this.tableLayoutPanel3.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonEndEdit, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonCancelEdit, 2, 0);
@@ -494,7 +494,7 @@
             this.buttonEndEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEndEdit.Location = new System.Drawing.Point(645, 3);
+            this.buttonEndEdit.Location = new System.Drawing.Point(644, 3);
             this.buttonEndEdit.Name = "buttonEndEdit";
             this.buttonEndEdit.Size = new System.Drawing.Size(157, 24);
             this.buttonEndEdit.TabIndex = 2;
@@ -507,11 +507,11 @@
             this.buttonCancelEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancelEdit.Location = new System.Drawing.Point(808, 3);
+            this.buttonCancelEdit.Location = new System.Drawing.Point(807, 3);
             this.buttonCancelEdit.Name = "buttonCancelEdit";
-            this.buttonCancelEdit.Size = new System.Drawing.Size(162, 24);
+            this.buttonCancelEdit.Size = new System.Drawing.Size(163, 24);
             this.buttonCancelEdit.TabIndex = 3;
-            this.buttonCancelEdit.Text = "Отменить завершения";
+            this.buttonCancelEdit.Text = "Отменить изменения";
             this.buttonCancelEdit.UseVisualStyleBackColor = true;
             this.buttonCancelEdit.Click += new System.EventHandler(this.button2_Click);
             // 
