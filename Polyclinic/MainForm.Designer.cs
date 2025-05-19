@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode161 = new System.Windows.Forms.TreeNode("Врачи");
-            System.Windows.Forms.TreeNode treeNode162 = new System.Windows.Forms.TreeNode("Диагнозы");
-            System.Windows.Forms.TreeNode treeNode163 = new System.Windows.Forms.TreeNode("Записи в медкарте");
-            System.Windows.Forms.TreeNode treeNode164 = new System.Windows.Forms.TreeNode("Запись на приём");
-            System.Windows.Forms.TreeNode treeNode165 = new System.Windows.Forms.TreeNode("Кабинеты");
-            System.Windows.Forms.TreeNode treeNode166 = new System.Windows.Forms.TreeNode("Лекарства");
-            System.Windows.Forms.TreeNode treeNode167 = new System.Windows.Forms.TreeNode("Медицинские услуги");
-            System.Windows.Forms.TreeNode treeNode168 = new System.Windows.Forms.TreeNode("Медкарты");
-            System.Windows.Forms.TreeNode treeNode169 = new System.Windows.Forms.TreeNode("Оказанные услуги");
-            System.Windows.Forms.TreeNode treeNode170 = new System.Windows.Forms.TreeNode("Отделения");
-            System.Windows.Forms.TreeNode treeNode171 = new System.Windows.Forms.TreeNode("Пациенты");
-            System.Windows.Forms.TreeNode treeNode172 = new System.Windows.Forms.TreeNode("Платежи");
-            System.Windows.Forms.TreeNode treeNode173 = new System.Windows.Forms.TreeNode("Приёмы врачей");
-            System.Windows.Forms.TreeNode treeNode174 = new System.Windows.Forms.TreeNode("Рецепты");
-            System.Windows.Forms.TreeNode treeNode175 = new System.Windows.Forms.TreeNode("Специальности");
-            System.Windows.Forms.TreeNode treeNode176 = new System.Windows.Forms.TreeNode("Таблицы", new System.Windows.Forms.TreeNode[] {
-            treeNode161,
-            treeNode162,
-            treeNode163,
-            treeNode164,
-            treeNode165,
-            treeNode166,
-            treeNode167,
-            treeNode168,
-            treeNode169,
-            treeNode170,
-            treeNode171,
-            treeNode172,
-            treeNode173,
-            treeNode174,
-            treeNode175});
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Врачи");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Диагнозы");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Записи в медкарте");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Запись на приём");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Кабинеты");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Лекарства");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Медицинские услуги");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Медкарты");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Оказанные услуги");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Отделения");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Пациенты");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Платежи");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Приёмы врачей");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Рецепты");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Специальности");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Таблицы", new System.Windows.Forms.TreeNode[] {
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20,
+            treeNode21,
+            treeNode22,
+            treeNode23,
+            treeNode24,
+            treeNode25,
+            treeNode26,
+            treeNode27,
+            treeNode28,
+            treeNode29,
+            treeNode30,
+            treeNode31});
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -70,8 +70,6 @@
             this.buttonAddition = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonEndEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonCancelEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.запросыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пациентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискПоФИОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,12 +98,16 @@
             this.ожидаютсяToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.поликлиникаDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.поликлиникаDataSet = new Polyclinic.ПоликлиникаDataSet();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonEndEdit = new System.Windows.Forms.Button();
+            this.buttonCancelEdit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSet)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -116,7 +118,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -149,40 +151,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode161.Name = "Врачи";
-            treeNode161.Text = "Врачи";
-            treeNode162.Name = "Диагнозы";
-            treeNode162.Text = "Диагнозы";
-            treeNode163.Name = "Записи в медкарте";
-            treeNode163.Text = "Записи в медкарте";
-            treeNode164.Name = "Запись на приём";
-            treeNode164.Text = "Запись на приём";
-            treeNode165.Name = "Кабинеты";
-            treeNode165.Text = "Кабинеты";
-            treeNode166.Name = "Лекарства";
-            treeNode166.Text = "Лекарства";
-            treeNode167.Name = "Медицинские услуги";
-            treeNode167.Text = "Медицинские услуги";
-            treeNode168.Name = "Медкарты";
-            treeNode168.Text = "Медкарты";
-            treeNode169.Name = "Оказанные услуги";
-            treeNode169.Text = "Оказанные услуги";
-            treeNode170.Name = "Отделения";
-            treeNode170.Text = "Отделения";
-            treeNode171.Name = "Пациенты";
-            treeNode171.Text = "Пациенты";
-            treeNode172.Name = "Платежи";
-            treeNode172.Text = "Платежи";
-            treeNode173.Name = "Приёмы врачей";
-            treeNode173.Text = "Приёмы врачей";
-            treeNode174.Name = "Рецепты";
-            treeNode174.Text = "Рецепты";
-            treeNode175.Name = "Специальности";
-            treeNode175.Text = "Специальности";
-            treeNode176.Name = "Tables";
-            treeNode176.Text = "Таблицы";
+            treeNode17.Name = "Врачи";
+            treeNode17.Text = "Врачи";
+            treeNode18.Name = "Диагнозы";
+            treeNode18.Text = "Диагнозы";
+            treeNode19.Name = "Записи в медкарте";
+            treeNode19.Text = "Записи в медкарте";
+            treeNode20.Name = "Запись на приём";
+            treeNode20.Text = "Запись на приём";
+            treeNode21.Name = "Кабинеты";
+            treeNode21.Text = "Кабинеты";
+            treeNode22.Name = "Лекарства";
+            treeNode22.Text = "Лекарства";
+            treeNode23.Name = "Медицинские услуги";
+            treeNode23.Text = "Медицинские услуги";
+            treeNode24.Name = "Медкарты";
+            treeNode24.Text = "Медкарты";
+            treeNode25.Name = "Оказанные услуги";
+            treeNode25.Text = "Оказанные услуги";
+            treeNode26.Name = "Отделения";
+            treeNode26.Text = "Отделения";
+            treeNode27.Name = "Пациенты";
+            treeNode27.Text = "Пациенты";
+            treeNode28.Name = "Платежи";
+            treeNode28.Text = "Платежи";
+            treeNode29.Name = "Приёмы врачей";
+            treeNode29.Text = "Приёмы врачей";
+            treeNode30.Name = "Рецепты";
+            treeNode30.Text = "Рецепты";
+            treeNode31.Name = "Специальности";
+            treeNode31.Text = "Специальности";
+            treeNode32.Name = "Tables";
+            treeNode32.Text = "Таблицы";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode176});
+            treeNode32});
             this.treeView1.Size = new System.Drawing.Size(192, 456);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -211,7 +213,7 @@
             this.запросыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(303, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(183, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -227,9 +229,7 @@
             this.Record.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buttonAddition,
             this.buttonEdit,
-            this.buttonDelete,
-            this.buttonEndEdit,
-            this.buttonCancelEdit});
+            this.buttonDelete});
             this.Record.Name = "Record";
             this.Record.Size = new System.Drawing.Size(59, 20);
             this.Record.Text = "Записи";
@@ -238,7 +238,7 @@
             // 
             this.buttonAddition.Name = "buttonAddition";
             this.buttonAddition.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.buttonAddition.Size = new System.Drawing.Size(249, 22);
+            this.buttonAddition.Size = new System.Drawing.Size(232, 22);
             this.buttonAddition.Text = "Добавить запись";
             this.buttonAddition.Click += new System.EventHandler(this.buttonAddition_Click);
             // 
@@ -246,7 +246,7 @@
             // 
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
-            this.buttonEdit.Size = new System.Drawing.Size(249, 22);
+            this.buttonEdit.Size = new System.Drawing.Size(232, 22);
             this.buttonEdit.Text = "Изменить запись";
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
@@ -254,25 +254,9 @@
             // 
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Delete)));
-            this.buttonDelete.Size = new System.Drawing.Size(249, 22);
+            this.buttonDelete.Size = new System.Drawing.Size(232, 22);
             this.buttonDelete.Text = "Удалить запись";
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
-            // buttonEndEdit
-            // 
-            this.buttonEndEdit.Name = "buttonEndEdit";
-            this.buttonEndEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.buttonEndEdit.Size = new System.Drawing.Size(249, 22);
-            this.buttonEndEdit.Text = "Завершить изменения";
-            this.buttonEndEdit.Click += new System.EventHandler(this.buttonEndEdit_Click);
-            // 
-            // buttonCancelEdit
-            // 
-            this.buttonCancelEdit.Name = "buttonCancelEdit";
-            this.buttonCancelEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.buttonCancelEdit.Size = new System.Drawing.Size(249, 22);
-            this.buttonCancelEdit.Text = "Отменить завершения";
-            this.buttonCancelEdit.Click += new System.EventHandler(this.buttonCancelEdit_Click);
             // 
             // запросыToolStripMenuItem
             // 
@@ -303,7 +287,7 @@
             // поискПоФИОToolStripMenuItem
             // 
             this.поискПоФИОToolStripMenuItem.Name = "поискПоФИОToolStripMenuItem";
-            this.поискПоФИОToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.поискПоФИОToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.поискПоФИОToolStripMenuItem.Text = "Поиск по ФИО";
             this.поискПоФИОToolStripMenuItem.Click += new System.EventHandler(this.поискПоФИОToolStripMenuItem_Click);
             // 
@@ -317,7 +301,7 @@
             // записиНаПриёмToolStripMenuItem
             // 
             this.записиНаПриёмToolStripMenuItem.Name = "записиНаПриёмToolStripMenuItem";
-            this.записиНаПриёмToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.записиНаПриёмToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.записиНаПриёмToolStripMenuItem.Text = "Записи на приём";
             this.записиНаПриёмToolStripMenuItem.Click += new System.EventHandler(this.записиНаПриёмToolStripMenuItem_Click);
             // 
@@ -375,7 +359,7 @@
             // поискПоФИОToolStripMenuItem1
             // 
             this.поискПоФИОToolStripMenuItem1.Name = "поискПоФИОToolStripMenuItem1";
-            this.поискПоФИОToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.поискПоФИОToolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
             this.поискПоФИОToolStripMenuItem1.Text = "Поиск по ФИО";
             this.поискПоФИОToolStripMenuItem1.Click += new System.EventHandler(this.поискПоФИОToolStripMenuItem1_Click);
             // 
@@ -411,14 +395,14 @@
             // неоплаченныеToolStripMenuItem
             // 
             this.неоплаченныеToolStripMenuItem.Name = "неоплаченныеToolStripMenuItem";
-            this.неоплаченныеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.неоплаченныеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.неоплаченныеToolStripMenuItem.Text = "Неоплаченные";
             this.неоплаченныеToolStripMenuItem.Click += new System.EventHandler(this.неоплаченныеToolStripMenuItem_Click);
             // 
             // ожидаютсяToolStripMenuItem
             // 
             this.ожидаютсяToolStripMenuItem.Name = "ожидаютсяToolStripMenuItem";
-            this.ожидаютсяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ожидаютсяToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.ожидаютсяToolStripMenuItem.Text = "Ожидаются";
             this.ожидаютсяToolStripMenuItem.Click += new System.EventHandler(this.ожидаютсяToolStripMenuItem_Click);
             // 
@@ -456,21 +440,21 @@
             // зToolStripMenuItem
             // 
             this.зToolStripMenuItem.Name = "зToolStripMenuItem";
-            this.зToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.зToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.зToolStripMenuItem.Text = "Завершённые";
             this.зToolStripMenuItem.Click += new System.EventHandler(this.зToolStripMenuItem_Click);
             // 
             // отменённыеToolStripMenuItem
             // 
             this.отменённыеToolStripMenuItem.Name = "отменённыеToolStripMenuItem";
-            this.отменённыеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отменённыеToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.отменённыеToolStripMenuItem.Text = "Отменённые";
             this.отменённыеToolStripMenuItem.Click += new System.EventHandler(this.отменённыеToolStripMenuItem_Click);
             // 
             // ожидаютсяToolStripMenuItem1
             // 
             this.ожидаютсяToolStripMenuItem1.Name = "ожидаютсяToolStripMenuItem1";
-            this.ожидаютсяToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ожидаютсяToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
             this.ожидаютсяToolStripMenuItem1.Text = "Запланированные";
             this.ожидаютсяToolStripMenuItem1.Click += new System.EventHandler(this.ожидаютсяToolStripMenuItem1_Click);
             // 
@@ -484,23 +468,62 @@
             this.поликлиникаDataSet.DataSetName = "ПоликлиникаDataSet";
             this.поликлиникаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.70112F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.29888F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel3.Controls.Add(this.menuStrip1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonEndEdit, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonCancelEdit, 2, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(970, 30);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // buttonEndEdit
+            // 
+            this.buttonEndEdit.Location = new System.Drawing.Point(643, 3);
+            this.buttonEndEdit.Name = "buttonEndEdit";
+            this.buttonEndEdit.Size = new System.Drawing.Size(157, 23);
+            this.buttonEndEdit.TabIndex = 2;
+            this.buttonEndEdit.Text = "Завершить изменения";
+            this.buttonEndEdit.UseVisualStyleBackColor = true;
+            this.buttonEndEdit.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonCancelEdit
+            // 
+            this.buttonCancelEdit.Location = new System.Drawing.Point(806, 3);
+            this.buttonCancelEdit.Name = "buttonCancelEdit";
+            this.buttonCancelEdit.Size = new System.Drawing.Size(161, 23);
+            this.buttonCancelEdit.TabIndex = 3;
+            this.buttonCancelEdit.Text = "Отменить завершения";
+            this.buttonCancelEdit.UseVisualStyleBackColor = true;
+            this.buttonCancelEdit.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(997, 513);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.поликлиникаDataSet)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -518,8 +541,6 @@
         private System.Windows.Forms.ToolStripMenuItem buttonAddition;
         private System.Windows.Forms.ToolStripMenuItem buttonEdit;
         private System.Windows.Forms.ToolStripMenuItem buttonDelete;
-        private System.Windows.Forms.ToolStripMenuItem buttonEndEdit;
-        private System.Windows.Forms.ToolStripMenuItem buttonCancelEdit;
         private System.Windows.Forms.ToolStripMenuItem запросыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискВрачаToolStripMenuItem;
@@ -547,6 +568,9 @@
         private System.Windows.Forms.ToolStripMenuItem полToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem мужчиныToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem женщиныToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button buttonEndEdit;
+        private System.Windows.Forms.Button buttonCancelEdit;
     }
 }
 

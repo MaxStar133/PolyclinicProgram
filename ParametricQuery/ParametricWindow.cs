@@ -21,7 +21,7 @@ namespace ParametricQuery
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEndEdit_Click(object sender, EventArgs e)
         {
             SurName = SurnameText.Text;
             FirstName = FirstNameText.Text;
@@ -31,7 +31,7 @@ namespace ParametricQuery
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCancelEdit_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
