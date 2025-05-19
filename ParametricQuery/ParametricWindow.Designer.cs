@@ -86,20 +86,20 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Отчество";
             // 
-            // button1
+            // buttonEndEdit
             // 
             this.buttonEndEdit.Location = new System.Drawing.Point(77, 141);
-            this.buttonEndEdit.Name = "button1";
+            this.buttonEndEdit.Name = "buttonEndEdit";
             this.buttonEndEdit.Size = new System.Drawing.Size(84, 27);
             this.buttonEndEdit.TabIndex = 6;
             this.buttonEndEdit.Text = "Принять";
             this.buttonEndEdit.UseVisualStyleBackColor = true;
             this.buttonEndEdit.Click += new System.EventHandler(this.buttonEndEdit_Click);
             // 
-            // button2
+            // buttonCancelEdit
             // 
             this.buttonCancelEdit.Location = new System.Drawing.Point(190, 141);
-            this.buttonCancelEdit.Name = "button2";
+            this.buttonCancelEdit.Name = "buttonCancelEdit";
             this.buttonCancelEdit.Size = new System.Drawing.Size(84, 27);
             this.buttonCancelEdit.TabIndex = 7;
             this.buttonCancelEdit.Text = "Отменить";
@@ -119,6 +119,7 @@
             this.Controls.Add(this.MiddleNameText);
             this.Controls.Add(this.FirstNameText);
             this.Controls.Add(this.SurnameText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ParametricWindow";
             this.Text = "Параметрический запрос";
             this.ResumeLayout(false);

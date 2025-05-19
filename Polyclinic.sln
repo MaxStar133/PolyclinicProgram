@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyclinic", "Polyclinic\Po
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParametricQuery", "ParametricQuery\ParametricQuery.csproj", "{D4B310AA-FFDF-44D6-9B60-A7CE8511156E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutProgram", "AboutProgram\AboutProgram.csproj", "{2F22515B-A497-41DE-AE40-AD833D0E5525}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D4B310AA-FFDF-44D6-9B60-A7CE8511156E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B310AA-FFDF-44D6-9B60-A7CE8511156E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B310AA-FFDF-44D6-9B60-A7CE8511156E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F22515B-A497-41DE-AE40-AD833D0E5525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F22515B-A497-41DE-AE40-AD833D0E5525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F22515B-A497-41DE-AE40-AD833D0E5525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F22515B-A497-41DE-AE40-AD833D0E5525}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
