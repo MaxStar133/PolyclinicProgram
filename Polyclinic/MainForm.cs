@@ -4,7 +4,7 @@ using System.Data.OleDb;
 using System.IO;
 using System.Windows.Forms;
 using ParametricQuery;
-
+using AboutProgram;
 namespace Polyclinic
 {
     public partial class MainWindow : Form
@@ -437,7 +437,11 @@ namespace Polyclinic
             }
         }
 
-    
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var abouutPogram = new AboutProgramWindow();
+            abouutPogram.ShowDialog();
+        }
     }
 }
  
