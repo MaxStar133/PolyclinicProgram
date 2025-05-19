@@ -209,6 +209,9 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.70112F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.29888F));
@@ -221,7 +224,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(970, 30);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(973, 30);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // menuStrip1
@@ -488,9 +491,12 @@
             // 
             // buttonEndEdit
             // 
-            this.buttonEndEdit.Location = new System.Drawing.Point(643, 3);
+            this.buttonEndEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEndEdit.Location = new System.Drawing.Point(645, 3);
             this.buttonEndEdit.Name = "buttonEndEdit";
-            this.buttonEndEdit.Size = new System.Drawing.Size(157, 23);
+            this.buttonEndEdit.Size = new System.Drawing.Size(157, 24);
             this.buttonEndEdit.TabIndex = 2;
             this.buttonEndEdit.Text = "Завершить изменения";
             this.buttonEndEdit.UseVisualStyleBackColor = true;
@@ -498,9 +504,12 @@
             // 
             // buttonCancelEdit
             // 
-            this.buttonCancelEdit.Location = new System.Drawing.Point(806, 3);
+            this.buttonCancelEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelEdit.Location = new System.Drawing.Point(808, 3);
             this.buttonCancelEdit.Name = "buttonCancelEdit";
-            this.buttonCancelEdit.Size = new System.Drawing.Size(161, 23);
+            this.buttonCancelEdit.Size = new System.Drawing.Size(162, 24);
             this.buttonCancelEdit.TabIndex = 3;
             this.buttonCancelEdit.Text = "Отменить завершения";
             this.buttonCancelEdit.UseVisualStyleBackColor = true;
