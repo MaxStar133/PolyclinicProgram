@@ -12,7 +12,7 @@ namespace Polyclinic
 
         public void SetConnectionString(string path)
         {
-            connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""{path}"";Persist Security Info=False;";
+            connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""{path}"";Persist Security Info=False;";
         }
         public DataTable GetData(string dataQuery)
         {

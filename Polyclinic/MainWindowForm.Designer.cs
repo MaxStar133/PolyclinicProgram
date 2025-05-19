@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Врачи");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Диагнозы");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Записи в медкарте");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Запись на приём");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Кабинеты");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Лекарства");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Медицинские услуги");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Медкарты");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Оказанные услуги");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Отделения");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Пациенты");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Платежи");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Приёмы врачей");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Рецепты");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Специальности");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Таблицы", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14,
-            treeNode15});
+            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Врачи");
+            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Диагнозы");
+            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Записи в медкарте");
+            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Запись на приём");
+            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Кабинеты");
+            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Лекарства");
+            System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("Медицинские услуги");
+            System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("Медкарты");
+            System.Windows.Forms.TreeNode treeNode105 = new System.Windows.Forms.TreeNode("Оказанные услуги");
+            System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("Отделения");
+            System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("Пациенты");
+            System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("Платежи");
+            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Приёмы врачей");
+            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("Рецепты");
+            System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Специальности");
+            System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Таблицы", new System.Windows.Forms.TreeNode[] {
+            treeNode97,
+            treeNode98,
+            treeNode99,
+            treeNode100,
+            treeNode101,
+            treeNode102,
+            treeNode103,
+            treeNode104,
+            treeNode105,
+            treeNode106,
+            treeNode107,
+            treeNode108,
+            treeNode109,
+            treeNode110,
+            treeNode111});
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -97,11 +97,11 @@
             this.зToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отменённыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ожидаютсяToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonEndEdit = new System.Windows.Forms.Button();
             this.buttonCancelEdit = new System.Windows.Forms.Button();
             this.поликлиникаDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.поликлиникаDataSet = new Polyclinic.ПоликлиникаDataSet();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -150,44 +150,42 @@
             this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeView1.FullRowSelect = true;
-            this.treeView1.HotTracking = true;
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Врачи";
-            treeNode1.Text = "Врачи";
-            treeNode2.Name = "Диагнозы";
-            treeNode2.Text = "Диагнозы";
-            treeNode3.Name = "Записи в медкарте";
-            treeNode3.Text = "Записи в медкарте";
-            treeNode4.Name = "Запись на приём";
-            treeNode4.Text = "Запись на приём";
-            treeNode5.Name = "Кабинеты";
-            treeNode5.Text = "Кабинеты";
-            treeNode6.Name = "Лекарства";
-            treeNode6.Text = "Лекарства";
-            treeNode7.Name = "Медицинские услуги";
-            treeNode7.Text = "Медицинские услуги";
-            treeNode8.Name = "Медкарты";
-            treeNode8.Text = "Медкарты";
-            treeNode9.Name = "Оказанные услуги";
-            treeNode9.Text = "Оказанные услуги";
-            treeNode10.Name = "Отделения";
-            treeNode10.Text = "Отделения";
-            treeNode11.Name = "Пациенты";
-            treeNode11.Text = "Пациенты";
-            treeNode12.Name = "Платежи";
-            treeNode12.Text = "Платежи";
-            treeNode13.Name = "Приёмы врачей";
-            treeNode13.Text = "Приёмы врачей";
-            treeNode14.Name = "Рецепты";
-            treeNode14.Text = "Рецепты";
-            treeNode15.Name = "Специальности";
-            treeNode15.Text = "Специальности";
-            treeNode16.Name = "Tables";
-            treeNode16.Text = "Таблицы";
+            treeNode97.Name = "Врачи";
+            treeNode97.Text = "Врачи";
+            treeNode98.Name = "Диагнозы";
+            treeNode98.Text = "Диагнозы";
+            treeNode99.Name = "Записи в медкарте";
+            treeNode99.Text = "Записи в медкарте";
+            treeNode100.Name = "Запись на приём";
+            treeNode100.Text = "Запись на приём";
+            treeNode101.Name = "Кабинеты";
+            treeNode101.Text = "Кабинеты";
+            treeNode102.Name = "Лекарства";
+            treeNode102.Text = "Лекарства";
+            treeNode103.Name = "Медицинские услуги";
+            treeNode103.Text = "Медицинские услуги";
+            treeNode104.Name = "Медкарты";
+            treeNode104.Text = "Медкарты";
+            treeNode105.Name = "Оказанные услуги";
+            treeNode105.Text = "Оказанные услуги";
+            treeNode106.Name = "Отделения";
+            treeNode106.Text = "Отделения";
+            treeNode107.Name = "Пациенты";
+            treeNode107.Text = "Пациенты";
+            treeNode108.Name = "Платежи";
+            treeNode108.Text = "Платежи";
+            treeNode109.Name = "Приёмы врачей";
+            treeNode109.Text = "Приёмы врачей";
+            treeNode110.Name = "Рецепты";
+            treeNode110.Text = "Рецепты";
+            treeNode111.Name = "Специальности";
+            treeNode111.Text = "Специальности";
+            treeNode112.Name = "Tables";
+            treeNode112.Text = "Таблицы";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode16});
+            treeNode112});
             this.treeView1.Size = new System.Drawing.Size(192, 456);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -479,13 +477,6 @@
             this.ожидаютсяToolStripMenuItem1.Text = "Запланированные";
             this.ожидаютсяToolStripMenuItem1.Click += new System.EventHandler(this.ожидаютсяToolStripMenuItem1_Click);
             // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
-            // 
             // buttonEndEdit
             // 
             this.buttonEndEdit.Location = new System.Drawing.Point(643, 3);
@@ -515,6 +506,13 @@
             // 
             this.поликлиникаDataSet.DataSetName = "ПоликлиникаDataSet";
             this.поликлиникаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
