@@ -442,6 +442,131 @@ namespace Polyclinic
             var abouutPogram = new AboutProgramWindow();
             abouutPogram.ShowDialog();
         }
+
+        private void рецептыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var searchForm = new ParametricWindow())
+            {
+                if (searchForm.ShowDialog() == DialogResult.OK)
+                {
+
+                    string lastName = searchForm.SurName;
+                    string firstName = searchForm.FirstName;
+                    string middleName = searchForm.MiddleName;
+
+                    try
+                    {
+                        DataTable result = query.GetRecipes(lastName, firstName, middleName);
+                        dataGridView1.DataSource = result;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void оказанныеУслугиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var searchForm = new ParametricWindow())
+            {
+                if (searchForm.ShowDialog() == DialogResult.OK)
+                {
+
+                    string lastName = searchForm.SurName;
+                    string firstName = searchForm.FirstName;
+                    string middleName = searchForm.MiddleName;
+
+                    try
+                    {
+                        DataTable result = query.GetServicesProvided(lastName, firstName, middleName);
+                        dataGridView1.DataSource = result;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }       
+        }
+
+        private void платежиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var searchForm = new ParametricWindow())
+            {
+                if (searchForm.ShowDialog() == DialogResult.OK)
+                {
+
+                    string lastName = searchForm.SurName;
+                    string firstName = searchForm.FirstName;
+                    string middleName = searchForm.MiddleName;
+
+                    try
+                    {
+                        DataTable result = query.GetPayments(lastName, firstName, middleName);
+                        dataGridView1.DataSource = result;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void приёмыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var searchForm = new ParametricWindow())
+            {
+                if (searchForm.ShowDialog() == DialogResult.OK)
+                {
+
+                    string lastName = searchForm.SurName;
+                    string firstName = searchForm.FirstName;
+                    string middleName = searchForm.MiddleName;
+
+                    try
+                    {
+                        DataTable result = query.GetAppointments(lastName, firstName, middleName);
+                        dataGridView1.DataSource = result;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void оказанныеУслугиToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (var searchForm = new ParametricWindow())
+            {
+                if (searchForm.ShowDialog() == DialogResult.OK)
+                {
+
+                    string lastName = searchForm.SurName;
+                    string firstName = searchForm.FirstName;
+                    string middleName = searchForm.MiddleName;
+
+                    try
+                    {
+                        DataTable result = query.GetServicesProvidedDoctors(lastName, firstName, middleName);
+                        dataGridView1.DataSource = result;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
  
