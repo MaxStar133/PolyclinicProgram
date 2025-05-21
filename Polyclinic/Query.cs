@@ -7,12 +7,9 @@ namespace Polyclinic
 {
     public class Query
     {
-        private string connectionString;
-
-        public void SetConnectionString(string path)
-        {
-            connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""{path}"";Persist Security Info=False;";
-        }
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Поликлиника.mdb;Persist Security Info=False;";
+  
+            
         public DataTable GetData(string dataQuery)
         {
             DataTable dataTable = new DataTable();

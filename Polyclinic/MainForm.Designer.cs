@@ -66,7 +66,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Record = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonAddition = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonEdit = new System.Windows.Forms.ToolStripMenuItem();
@@ -229,22 +228,14 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
             this.Record,
             this.запросыToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(277, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(229, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
-            this.файлToolStripMenuItem.Click += new System.EventHandler(this.файлToolStripMenuItem_Click);
             // 
             // Record
             // 
@@ -543,7 +534,6 @@
         private System.Windows.Forms.ToolStripMenuItem buttonEdit;
         private System.Windows.Forms.ToolStripMenuItem buttonDelete;
         private System.Windows.Forms.ToolStripMenuItem запросыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискВрачаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem пациентToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискПоФИОToolStripMenuItem;

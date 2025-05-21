@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using ParametricQuery;
 using AboutProgram;
+using System.ComponentModel;
 namespace Polyclinic
 {
     public partial class MainWindow : Form
@@ -14,6 +15,7 @@ namespace Polyclinic
         {
             InitializeComponent();
             ButtonDisabled();
+            
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -28,100 +30,101 @@ namespace Polyclinic
 
             else if (e.Node.Text == "Диагнозы")
             {
-                DataTable patientsData = query.GetData("Диагнозы");
+                DataTable data = query.GetData("Диагнозы");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
+                dataGridView1.Sort(dataGridView1.Columns["Id_диагноза"], ListSortDirection.Ascending);
             }
 
             else if (e.Node.Text == "Записи в медкарте")
             {
-                DataTable patientsData = query.GetData("Записи_в_медкарте");
+                DataTable data = query.GetData("Записи_в_медкарте");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Запись на приём")
             {
-                DataTable patientsData = query.GetData("Запись_на_приём");
+                DataTable data = query.GetData("Запись_на_приём");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Кабинеты")
             {
-                DataTable patientsData = query.GetData("Кабинеты");
+                DataTable data = query.GetData("Кабинеты");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Лекарства")
             {
-                DataTable patientsData = query.GetData("Лекарства");
+                DataTable data = query.GetData("Лекарства");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Медицинские услуги")
             {
-                DataTable patientsData = query.GetData("Медицинские_услуги");
+                DataTable data = query.GetData("Медицинские_услуги");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Медкарты")
             {
-                DataTable patientsData = query.GetData("Медкарты");
+                DataTable data = query.GetData("Медкарты");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Оказанные услуги")
             {
-                DataTable patientsData = query.GetData("Оказанные_услуги");
+                DataTable data = query.GetData("Оказанные_услуги");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Отделения")
             {
-                DataTable patientsData = query.GetData("Отделения");
+                DataTable data = query.GetData("Отделения");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Пациенты")
             {
-                DataTable patientsData = query.GetData("Пациенты");
+                DataTable data = query.GetData("Пациенты");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Платежи")
             {
-                DataTable patientsData = query.GetData("Платежи");
+                DataTable data = query.GetData("Платежи");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Приёмы врачей")
             {
-                DataTable patientsData = query.GetData("Приёмы_врачей");
+                DataTable data = query.GetData("Приёмы_врачей");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Рецепты")
             {
-                DataTable patientsData = query.GetData("Рецепты");
+                DataTable data = query.GetData("Рецепты");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
             else if (e.Node.Text == "Специальности")
             {
-                DataTable patientsData = query.GetData("Специальности");
+                DataTable data = query.GetData("Специальности");
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = patientsData;
+                dataGridView1.DataSource = data;
             }
 
         }
@@ -248,42 +251,6 @@ namespace Polyclinic
                 }
             }
         }
-
-        private void файлToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-
-                // Устанавливаем фильтр только для файлов .mdb (Access)
-                openFileDialog.Filter = "Файлы баз данных (*.mdb)|*.mdb|Все файлы (*.*)|*.*";
-                openFileDialog.FilterIndex = 1; // По умолчанию выбираем .mdb файлы
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string selectedFilePath = openFileDialog.FileName;
-
-                    // Проверяем расширение файла (дополнительная проверка)
-                    if (Path.GetExtension(selectedFilePath).ToLower() == ".mdb")
-                    {
-                        // Здесь можно использовать выбранный файл .mdb
-                        MessageBox.Show($"Выбран файл БД: {selectedFilePath}",
-                                      "Файл выбран",
-                                      MessageBoxButtons.OK,
-                                      MessageBoxIcon.Information);
-
-                        query.SetConnectionString(selectedFilePath);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Пожалуйста, выберите файл с расширением .mdb",
-                                      "Неверный формат",
-                                      MessageBoxButtons.OK,
-                                      MessageBoxIcon.Warning);
-                    }
-                }
-            }
-        }
-
      
         
         private void оплаченныеToolStripMenuItem_Click(object sender, EventArgs e)

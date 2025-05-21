@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ПоликлиникаConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ПоликлиникаConnectionString (Settings)" PropertyReference="ApplicationSettings.Polyclinic.Properties.Settings.GlobalReference.Default.ПоликлиникаConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ПоликлиникаConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ПоликлиникаConnectionString1 (Settings)" PropertyReference="ApplicationSettings.Polyclinic.Properties.Settings.GlobalReference.Default.ПоликлиникаConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ВрачиTableAdapter" GeneratorDataComponentClassName="ВрачиTableAdapter" Name="Врачи" UserDataComponentName="ВрачиTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Врачи" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Врачи" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Врачи` WHERE ((`Id_врача` = ?) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Id_специальности` IS NULL) OR (`Id_специальности` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Телефон` = ?)))</CommandText>
@@ -85,16 +85,14 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ДиагнозыTableAdapter" GeneratorDataComponentClassName="ДиагнозыTableAdapter" Name="Диагнозы" UserDataComponentName="ДиагнозыTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Диагнозы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Диагнозы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Диагнозы` WHERE ((`Id_диагноза` = ?) AND ((? = 1 AND `Код_по_МКБ-10` IS NULL) OR (`Код_по_МКБ-10` = ?)) AND ((? = 1 AND `Название_диагноза` IS NULL) OR (`Название_диагноза` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Диагнозы` WHERE ((`Id_диагноза` = ?) AND ((? = 1 AND `Код_по_МКБ-10` IS NULL) OR (`Код_по_МКБ-10` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Код_по_МКБ-10" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Код_по_МКБ-10" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Код_по_МКБ-10" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Код_по_МКБ-10" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Название_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Название_диагноза" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Название_диагноза" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Название_диагноза" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
@@ -104,7 +102,7 @@
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Код_по_МКБ-10" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Код_по_МКБ-10" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Название_диагноза" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Название_диагноза" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Название_диагноза" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Название_диагноза" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -116,16 +114,14 @@
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Диагнозы` SET `Id_диагноза` = ?, `Код_по_МКБ-10` = ?, `Название_диагноза` = ? WHERE ((`Id_диагноза` = ?) AND ((? = 1 AND `Код_по_МКБ-10` IS NULL) OR (`Код_по_МКБ-10` = ?)) AND ((? = 1 AND `Название_диагноза` IS NULL) OR (`Название_диагноза` = ?)))</CommandText>
+                    <CommandText>UPDATE `Диагнозы` SET `Id_диагноза` = ?, `Код_по_МКБ-10` = ?, `Название_диагноза` = ? WHERE ((`Id_диагноза` = ?) AND ((? = 1 AND `Код_по_МКБ-10` IS NULL) OR (`Код_по_МКБ-10` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Код_по_МКБ-10" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Код_по_МКБ-10" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Название_диагноза" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Название_диагноза" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Название_диагноза" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Название_диагноза" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Код_по_МКБ-10" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Код_по_МКБ-10" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Код_по_МКБ-10" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Код_по_МКБ-10" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Название_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Название_диагноза" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Название_диагноза" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Название_диагноза" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -140,55 +136,55 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Записи_в_медкартеTableAdapter" GeneratorDataComponentClassName="Записи_в_медкартеTableAdapter" Name="Записи_в_медкарте" UserDataComponentName="Записи_в_медкартеTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Записи_в_медкарте" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Записи_в_медкарте" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Записи_в_медкарте` WHERE ((`Id_записи_в_медкарте` = ?) AND ((? = 1 AND `Id_диагноза` IS NULL) OR (`Id_диагноза` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_медкарты` IS NULL) OR (`Id_медкарты` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Записи_в_медкарте` WHERE ((`Id_записи_в_медкарте` = ?) AND ((? = 1 AND `Id_медкарты` IS NULL) OR (`Id_медкарты` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_диагноза` IS NULL) OR (`Id_диагноза` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Записи_в_медкарте` (`Id_записи_в_медкарте`, `Жалобы_пациента`, `Id_диагноза`, `Id_записи_на_приём`, `Id_медкарты`) VALUES (?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Записи_в_медкарте` (`Id_записи_в_медкарте`, `Id_медкарты`, `Id_записи_на_приём`, `Жалобы_пациента`, `Id_диагноза`) VALUES (?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Жалобы_пациента" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Жалобы_пациента" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id_записи_в_медкарте, Жалобы_пациента, Id_диагноза, Id_записи_на_приём, Id_медкарты FROM Записи_в_медкарте</CommandText>
+                    <CommandText>SELECT Id_записи_в_медкарте, Id_медкарты, Id_записи_на_приём, Жалобы_пациента, Id_диагноза FROM Записи_в_медкарте</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Записи_в_медкарте` SET `Id_записи_в_медкарте` = ?, `Жалобы_пациента` = ?, `Id_диагноза` = ?, `Id_записи_на_приём` = ?, `Id_медкарты` = ? WHERE ((`Id_записи_в_медкарте` = ?) AND ((? = 1 AND `Id_диагноза` IS NULL) OR (`Id_диагноза` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_медкарты` IS NULL) OR (`Id_медкарты` = ?)))</CommandText>
+                    <CommandText>UPDATE `Записи_в_медкарте` SET `Id_записи_в_медкарте` = ?, `Id_медкарты` = ?, `Id_записи_на_приём` = ?, `Жалобы_пациента` = ?, `Id_диагноза` = ? WHERE ((`Id_записи_в_медкарте` = ?) AND ((? = 1 AND `Id_медкарты` IS NULL) OR (`Id_медкарты` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_диагноза` IS NULL) OR (`Id_диагноза` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Жалобы_пациента" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Жалобы_пациента" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_диагноза" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_диагноза" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -196,16 +192,16 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id_записи_в_медкарте" DataSetColumn="Id_записи_в_медкарте" />
+              <Mapping SourceColumn="Id_медкарты" DataSetColumn="Id_медкарты" />
+              <Mapping SourceColumn="Id_записи_на_приём" DataSetColumn="Id_записи_на_приём" />
               <Mapping SourceColumn="Жалобы_пациента" DataSetColumn="Жалобы_пациента" />
               <Mapping SourceColumn="Id_диагноза" DataSetColumn="Id_диагноза" />
-              <Mapping SourceColumn="Id_записи_на_приём" DataSetColumn="Id_записи_на_приём" />
-              <Mapping SourceColumn="Id_медкарты" DataSetColumn="Id_медкарты" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Запись_на_приёмTableAdapter" GeneratorDataComponentClassName="Запись_на_приёмTableAdapter" Name="Запись_на_приём" UserDataComponentName="Запись_на_приёмTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Запись_на_приём" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Запись_на_приём" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Запись_на_приём` WHERE ((`Id_записи_на_приём` = ?) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)) AND ((? = 1 AND `Id_приёма_врача` IS NULL) OR (`Id_приёма_врача` = ?)) AND ((? = 1 AND `Id_пациента` IS NULL) OR (`Id_пациента` = ?)))</CommandText>
@@ -267,7 +263,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="КабинетыTableAdapter" GeneratorDataComponentClassName="КабинетыTableAdapter" Name="Кабинеты" UserDataComponentName="КабинетыTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Кабинеты" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Кабинеты" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Кабинеты` WHERE ((`Id_кабинета` = ?) AND ((? = 1 AND `Номер кабинета` IS NULL) OR (`Номер кабинета` = ?)) AND ((? = 1 AND `Id_отделения` IS NULL) OR (`Id_отделения` = ?)))</CommandText>
@@ -322,7 +318,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ЛекарстваTableAdapter" GeneratorDataComponentClassName="ЛекарстваTableAdapter" Name="Лекарства" UserDataComponentName="ЛекарстваTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Лекарства" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Лекарства" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Лекарства` WHERE ((`Id_лекарства` = ?) AND ((? = 1 AND `Название_лекарства` IS NULL) OR (`Название_лекарства` = ?)))</CommandText>
@@ -370,7 +366,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Медицинские_услугиTableAdapter" GeneratorDataComponentClassName="Медицинские_услугиTableAdapter" Name="Медицинские_услуги" UserDataComponentName="Медицинские_услугиTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Медицинские_услуги" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Медицинские_услуги" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Медицинские_услуги` WHERE ((`Id_медицинской_услуги` = ?) AND ((? = 1 AND `Название` IS NULL) OR (`Название` = ?)) AND ((? = 1 AND `Стоимость` IS NULL) OR (`Стоимость` = ?)))</CommandText>
@@ -425,53 +421,53 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="МедкартыTableAdapter" GeneratorDataComponentClassName="МедкартыTableAdapter" Name="Медкарты" UserDataComponentName="МедкартыTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Медкарты" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Медкарты" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Медкарты` WHERE ((`Id_медкарты` = ?) AND ((? = 1 AND `Дата_создания` IS NULL) OR (`Дата_создания` = ?)) AND ((? = 1 AND `Дата_последнего_обновления` IS NULL) OR (`Дата_последнего_обновления` = ?)) AND ((? = 1 AND `Id_пациента` IS NULL) OR (`Id_пациента` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Медкарты` WHERE ((`Id_медкарты` = ?) AND ((? = 1 AND `Id_пациента` IS NULL) OR (`Id_пациента` = ?)) AND ((? = 1 AND `Дата_создания` IS NULL) OR (`Дата_создания` = ?)) AND ((? = 1 AND `Дата_последнего_обновления` IS NULL) OR (`Дата_последнего_обновления` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_создания" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_создания" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_создания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_создания" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_последнего_обновления" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_последнего_обновления" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_последнего_обновления" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_последнего_обновления" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Медкарты` (`Id_медкарты`, `Дата_создания`, `Дата_последнего_обновления`, `Id_пациента`) VALUES (?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Медкарты` (`Id_медкарты`, `Id_пациента`, `Дата_создания`, `Дата_последнего_обновления`) VALUES (?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_создания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_создания" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_последнего_обновления" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_последнего_обновления" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id_медкарты, Дата_создания, Дата_последнего_обновления, Id_пациента FROM Медкарты</CommandText>
+                    <CommandText>SELECT Id_медкарты, Id_пациента, Дата_создания, Дата_последнего_обновления FROM Медкарты</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Медкарты` SET `Id_медкарты` = ?, `Дата_создания` = ?, `Дата_последнего_обновления` = ?, `Id_пациента` = ? WHERE ((`Id_медкарты` = ?) AND ((? = 1 AND `Дата_создания` IS NULL) OR (`Дата_создания` = ?)) AND ((? = 1 AND `Дата_последнего_обновления` IS NULL) OR (`Дата_последнего_обновления` = ?)) AND ((? = 1 AND `Id_пациента` IS NULL) OR (`Id_пациента` = ?)))</CommandText>
+                    <CommandText>UPDATE `Медкарты` SET `Id_медкарты` = ?, `Id_пациента` = ?, `Дата_создания` = ?, `Дата_последнего_обновления` = ? WHERE ((`Id_медкарты` = ?) AND ((? = 1 AND `Id_пациента` IS NULL) OR (`Id_пациента` = ?)) AND ((? = 1 AND `Дата_создания` IS NULL) OR (`Дата_создания` = ?)) AND ((? = 1 AND `Дата_последнего_обновления` IS NULL) OR (`Дата_последнего_обновления` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_создания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_создания" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_последнего_обновления" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_последнего_обновления" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_медкарты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медкарты" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_создания" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_создания" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_создания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_создания" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_последнего_обновления" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_последнего_обновления" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_последнего_обновления" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_последнего_обновления" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_пациента" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_пациента" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -479,61 +475,55 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id_медкарты" DataSetColumn="Id_медкарты" />
+              <Mapping SourceColumn="Id_пациента" DataSetColumn="Id_пациента" />
               <Mapping SourceColumn="Дата_создания" DataSetColumn="Дата_создания" />
               <Mapping SourceColumn="Дата_последнего_обновления" DataSetColumn="Дата_последнего_обновления" />
-              <Mapping SourceColumn="Id_пациента" DataSetColumn="Id_пациента" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Оказанные_услугиTableAdapter" GeneratorDataComponentClassName="Оказанные_услугиTableAdapter" Name="Оказанные_услуги" UserDataComponentName="Оказанные_услугиTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Оказанные_услуги" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Оказанные_услуги" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Оказанные_услуги` WHERE ((`Id_оказанной_услуги` = ?) AND ((? = 1 AND `Id_медицинской_услуги` IS NULL) OR (`Id_медицинской_услуги` = ?)) AND ((? = 1 AND `Дата_оказания` IS NULL) OR (`Дата_оказания` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Оказанные_услуги` WHERE ((`Id_оказанной_услуги` = ?) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_медицинской_услуги` IS NULL) OR (`Id_медицинской_услуги` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_оказания" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_оказания" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_оказания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_оказания" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Оказанные_услуги` (`Id_оказанной_услуги`, `Id_медицинской_услуги`, `Дата_оказания`, `Id_записи_на_приём`) VALUES (?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Оказанные_услуги` (`Id_оказанной_услуги`, `Id_записи_на_приём`, `Id_медицинской_услуги`) VALUES (?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_оказания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_оказания" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id_оказанной_услуги, Id_медицинской_услуги, Дата_оказания, Id_записи_на_приём FROM Оказанные_услуги</CommandText>
+                    <CommandText>SELECT Id_оказанной_услуги, Id_записи_на_приём, Id_медицинской_услуги FROM Оказанные_услуги</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Оказанные_услуги` SET `Id_оказанной_услуги` = ?, `Id_медицинской_услуги` = ?, `Дата_оказания` = ?, `Id_записи_на_приём` = ? WHERE ((`Id_оказанной_услуги` = ?) AND ((? = 1 AND `Id_медицинской_услуги` IS NULL) OR (`Id_медицинской_услуги` = ?)) AND ((? = 1 AND `Дата_оказания` IS NULL) OR (`Дата_оказания` = ?)) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)))</CommandText>
+                    <CommandText>UPDATE `Оказанные_услуги` SET `Id_оказанной_услуги` = ?, `Id_записи_на_приём` = ?, `Id_медицинской_услуги` = ? WHERE ((`Id_оказанной_услуги` = ?) AND ((? = 1 AND `Id_записи_на_приём` IS NULL) OR (`Id_записи_на_приём` = ?)) AND ((? = 1 AND `Id_медицинской_услуги` IS NULL) OR (`Id_медицинской_услуги` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_оказания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_оказания" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_оказания" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_оказания" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_оказания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_оказания" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_на_приём" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_на_приём" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_медицинской_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_медицинской_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -541,15 +531,14 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id_оказанной_услуги" DataSetColumn="Id_оказанной_услуги" />
-              <Mapping SourceColumn="Id_медицинской_услуги" DataSetColumn="Id_медицинской_услуги" />
-              <Mapping SourceColumn="Дата_оказания" DataSetColumn="Дата_оказания" />
               <Mapping SourceColumn="Id_записи_на_приём" DataSetColumn="Id_записи_на_приём" />
+              <Mapping SourceColumn="Id_медицинской_услуги" DataSetColumn="Id_медицинской_услуги" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ОтделенияTableAdapter" GeneratorDataComponentClassName="ОтделенияTableAdapter" Name="Отделения" UserDataComponentName="ОтделенияTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Отделения" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Отделения" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Отделения` WHERE ((`Id_отделения` = ?) AND ((? = 1 AND `Название_отделения` IS NULL) OR (`Название_отделения` = ?)))</CommandText>
@@ -597,7 +586,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПациентыTableAdapter" GeneratorDataComponentClassName="ПациентыTableAdapter" Name="Пациенты" UserDataComponentName="ПациентыTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Пациенты" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Пациенты" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Пациенты` WHERE ((`Id_пациента` = ?) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Дата_рождения` IS NULL) OR (`Дата_рождения` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Номер_полиса` IS NULL) OR (`Номер_полиса` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Телефон` = ?)))</CommandText>
@@ -687,53 +676,53 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПлатежиTableAdapter" GeneratorDataComponentClassName="ПлатежиTableAdapter" Name="Платежи" UserDataComponentName="ПлатежиTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Платежи" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Платежи" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Платежи` WHERE ((`Id_платежа` = ?) AND ((? = 1 AND `Способ_оплаты` IS NULL) OR (`Способ_оплаты` = ?)) AND ((? = 1 AND `Статус_оплаты` IS NULL) OR (`Статус_оплаты` = ?)) AND ((? = 1 AND `Id_оказанной_услуги` IS NULL) OR (`Id_оказанной_услуги` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Платежи` WHERE ((`Id_платежа` = ?) AND ((? = 1 AND `Id_оказанной_услуги` IS NULL) OR (`Id_оказанной_услуги` = ?)) AND ((? = 1 AND `Способ_оплаты` IS NULL) OR (`Способ_оплаты` = ?)) AND ((? = 1 AND `Статус_оплаты` IS NULL) OR (`Статус_оплаты` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_платежа" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_платежа" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Способ_оплаты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Способ_оплаты" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Способ_оплаты" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Способ_оплаты" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Статус_оплаты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Статус_оплаты" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Статус_оплаты" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Статус_оплаты" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Платежи` (`Id_платежа`, `Способ_оплаты`, `Статус_оплаты`, `Id_оказанной_услуги`) VALUES (?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Платежи` (`Id_платежа`, `Id_оказанной_услуги`, `Способ_оплаты`, `Статус_оплаты`) VALUES (?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_платежа" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_платежа" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Способ_оплаты" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Способ_оплаты" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Статус_оплаты" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Статус_оплаты" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id_платежа, Способ_оплаты, Статус_оплаты, Id_оказанной_услуги FROM Платежи</CommandText>
+                    <CommandText>SELECT Id_платежа, Id_оказанной_услуги, Способ_оплаты, Статус_оплаты FROM Платежи</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Платежи` SET `Id_платежа` = ?, `Способ_оплаты` = ?, `Статус_оплаты` = ?, `Id_оказанной_услуги` = ? WHERE ((`Id_платежа` = ?) AND ((? = 1 AND `Способ_оплаты` IS NULL) OR (`Способ_оплаты` = ?)) AND ((? = 1 AND `Статус_оплаты` IS NULL) OR (`Статус_оплаты` = ?)) AND ((? = 1 AND `Id_оказанной_услуги` IS NULL) OR (`Id_оказанной_услуги` = ?)))</CommandText>
+                    <CommandText>UPDATE `Платежи` SET `Id_платежа` = ?, `Id_оказанной_услуги` = ?, `Способ_оплаты` = ?, `Статус_оплаты` = ? WHERE ((`Id_платежа` = ?) AND ((? = 1 AND `Id_оказанной_услуги` IS NULL) OR (`Id_оказанной_услуги` = ?)) AND ((? = 1 AND `Способ_оплаты` IS NULL) OR (`Способ_оплаты` = ?)) AND ((? = 1 AND `Статус_оплаты` IS NULL) OR (`Статус_оплаты` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_платежа" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_платежа" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Способ_оплаты" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Способ_оплаты" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Статус_оплаты" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Статус_оплаты" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_платежа" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_платежа" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Способ_оплаты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Способ_оплаты" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Способ_оплаты" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Способ_оплаты" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Статус_оплаты" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Статус_оплаты" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Статус_оплаты" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Статус_оплаты" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_оказанной_услуги" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_оказанной_услуги" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -741,20 +730,20 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id_платежа" DataSetColumn="Id_платежа" />
+              <Mapping SourceColumn="Id_оказанной_услуги" DataSetColumn="Id_оказанной_услуги" />
               <Mapping SourceColumn="Способ_оплаты" DataSetColumn="Способ_оплаты" />
               <Mapping SourceColumn="Статус_оплаты" DataSetColumn="Статус_оплаты" />
-              <Mapping SourceColumn="Id_оказанной_услуги" DataSetColumn="Id_оказанной_услуги" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Приёмы_врачейTableAdapter" GeneratorDataComponentClassName="Приёмы_врачейTableAdapter" Name="Приёмы_врачей" UserDataComponentName="Приёмы_врачейTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Приёмы_врачей" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Приёмы_врачей" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Приёмы_врачей` WHERE ((`Id_приёма` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Приёмы_врачей` WHERE ((`Id_приёма_врача` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_приёма" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_приёма" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_приёма_врача" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_приёма_врача" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_приёма" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_приёма" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_приёма" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_приёма" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Время_начала" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Время_начала" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -770,9 +759,9 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Приёмы_врачей` (`Id_приёма`, `Дата_приёма`, `Время_начала`, `Время_окончания`, `Id_врача`, `Id_кабинета`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Приёмы_врачей` (`Id_приёма_врача`, `Дата_приёма`, `Время_начала`, `Время_окончания`, `Id_врача`, `Id_кабинета`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_приёма" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_приёма" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_приёма_врача" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_приёма_врача" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_приёма" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_приёма" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Время_начала" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Время_начала" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Время_окончания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Время_окончания" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -783,21 +772,21 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id_приёма, Дата_приёма, Время_начала, Время_окончания, Id_врача, Id_кабинета FROM Приёмы_врачей</CommandText>
+                    <CommandText>SELECT Id_приёма_врача, Дата_приёма, Время_начала, Время_окончания, Id_врача, Id_кабинета FROM Приёмы_врачей</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Приёмы_врачей` SET `Id_приёма` = ?, `Дата_приёма` = ?, `Время_начала` = ?, `Время_окончания` = ?, `Id_врача` = ?, `Id_кабинета` = ? WHERE ((`Id_приёма` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))</CommandText>
+                    <CommandText>UPDATE `Приёмы_врачей` SET `Id_приёма_врача` = ?, `Дата_приёма` = ?, `Время_начала` = ?, `Время_окончания` = ?, `Id_врача` = ?, `Id_кабинета` = ? WHERE ((`Id_приёма_врача` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_приёма" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_приёма" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_приёма_врача" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_приёма_врача" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_приёма" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_приёма" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Время_начала" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Время_начала" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Время_окончания" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Время_окончания" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_врача" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_врача" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_кабинета" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_кабинета" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_приёма" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_приёма" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_приёма_врача" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_приёма_врача" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_приёма" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_приёма" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_приёма" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_приёма" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Время_начала" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Время_начала" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -814,7 +803,7 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Id_приёма" DataSetColumn="Id_приёма" />
+              <Mapping SourceColumn="Id_приёма_врача" DataSetColumn="Id_приёма_врача" />
               <Mapping SourceColumn="Дата_приёма" DataSetColumn="Дата_приёма" />
               <Mapping SourceColumn="Время_начала" DataSetColumn="Время_начала" />
               <Mapping SourceColumn="Время_окончания" DataSetColumn="Время_окончания" />
@@ -825,65 +814,65 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="РецептыTableAdapter" GeneratorDataComponentClassName="РецептыTableAdapter" Name="Рецепты" UserDataComponentName="РецептыTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Рецепты" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Рецепты" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Рецепты` WHERE ((`Id_рецепта` = ?) AND ((? = 1 AND `Дата_выписки` IS NULL) OR (`Дата_выписки` = ?)) AND ((? = 1 AND `Срок_действия` IS NULL) OR (`Срок_действия` = ?)) AND ((? = 1 AND `Дозировка` IS NULL) OR (`Дозировка` = ?)) AND ((? = 1 AND `Id_лекарства` IS NULL) OR (`Id_лекарства` = ?)) AND ((? = 1 AND `Id_записи_в_медкарте` IS NULL) OR (`Id_записи_в_медкарте` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Рецепты` WHERE ((`Id_рецепта` = ?) AND ((? = 1 AND `Id_записи_в_медкарте` IS NULL) OR (`Id_записи_в_медкарте` = ?)) AND ((? = 1 AND `Id_лекарства` IS NULL) OR (`Id_лекарства` = ?)) AND ((? = 1 AND `Дата_выписки` IS NULL) OR (`Дата_выписки` = ?)) AND ((? = 1 AND `Срок_действия` IS NULL) OR (`Срок_действия` = ?)) AND ((? = 1 AND `Дозировка` IS NULL) OR (`Дозировка` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_рецепта" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_рецепта" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_выписки" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_выписки" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_выписки" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_выписки" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Срок_действия" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Срок_действия" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Срок_действия" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Срок_действия" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дозировка" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дозировка" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Дозировка" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Дозировка" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Рецепты` (`Id_рецепта`, `Дата_выписки`, `Срок_действия`, `Дозировка`, `Id_лекарства`, `Id_записи_в_медкарте`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Рецепты` (`Id_рецепта`, `Id_записи_в_медкарте`, `Id_лекарства`, `Дата_выписки`, `Срок_действия`, `Дозировка`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_рецепта" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_рецепта" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_выписки" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_выписки" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Срок_действия" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Срок_действия" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Дозировка" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Дозировка" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id_рецепта, Дата_выписки, Срок_действия, Дозировка, Id_лекарства, Id_записи_в_медкарте FROM Рецепты</CommandText>
+                    <CommandText>SELECT Id_рецепта, Id_записи_в_медкарте, Id_лекарства, Дата_выписки, Срок_действия, Дозировка FROM Рецепты</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Рецепты` SET `Id_рецепта` = ?, `Дата_выписки` = ?, `Срок_действия` = ?, `Дозировка` = ?, `Id_лекарства` = ?, `Id_записи_в_медкарте` = ? WHERE ((`Id_рецепта` = ?) AND ((? = 1 AND `Дата_выписки` IS NULL) OR (`Дата_выписки` = ?)) AND ((? = 1 AND `Срок_действия` IS NULL) OR (`Срок_действия` = ?)) AND ((? = 1 AND `Дозировка` IS NULL) OR (`Дозировка` = ?)) AND ((? = 1 AND `Id_лекарства` IS NULL) OR (`Id_лекарства` = ?)) AND ((? = 1 AND `Id_записи_в_медкарте` IS NULL) OR (`Id_записи_в_медкарте` = ?)))</CommandText>
+                    <CommandText>UPDATE `Рецепты` SET `Id_рецепта` = ?, `Id_записи_в_медкарте` = ?, `Id_лекарства` = ?, `Дата_выписки` = ?, `Срок_действия` = ?, `Дозировка` = ? WHERE ((`Id_рецепта` = ?) AND ((? = 1 AND `Id_записи_в_медкарте` IS NULL) OR (`Id_записи_в_медкарте` = ?)) AND ((? = 1 AND `Id_лекарства` IS NULL) OR (`Id_лекарства` = ?)) AND ((? = 1 AND `Дата_выписки` IS NULL) OR (`Дата_выписки` = ?)) AND ((? = 1 AND `Срок_действия` IS NULL) OR (`Срок_действия` = ?)) AND ((? = 1 AND `Дозировка` IS NULL) OR (`Дозировка` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_рецепта" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_рецепта" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата_выписки" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_выписки" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Срок_действия" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Срок_действия" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Дозировка" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Дозировка" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_рецепта" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_рецепта" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата_выписки" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата_выписки" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата_выписки" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата_выписки" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Срок_действия" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Срок_действия" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Срок_действия" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Срок_действия" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дозировка" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дозировка" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Дозировка" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Дозировка" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_лекарства" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_лекарства" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Id_записи_в_медкарте" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Id_записи_в_медкарте" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -891,17 +880,17 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id_рецепта" DataSetColumn="Id_рецепта" />
+              <Mapping SourceColumn="Id_записи_в_медкарте" DataSetColumn="Id_записи_в_медкарте" />
+              <Mapping SourceColumn="Id_лекарства" DataSetColumn="Id_лекарства" />
               <Mapping SourceColumn="Дата_выписки" DataSetColumn="Дата_выписки" />
               <Mapping SourceColumn="Срок_действия" DataSetColumn="Срок_действия" />
               <Mapping SourceColumn="Дозировка" DataSetColumn="Дозировка" />
-              <Mapping SourceColumn="Id_лекарства" DataSetColumn="Id_лекарства" />
-              <Mapping SourceColumn="Id_записи_в_медкарте" DataSetColumn="Id_записи_в_медкарте" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="СпециальностиTableAdapter" GeneratorDataComponentClassName="СпециальностиTableAdapter" Name="Специальности" UserDataComponentName="СпециальностиTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ПоликлиникаConnectionString (Settings)" DbObjectName="Специальности" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ПоликлиникаConnectionString1 (Settings)" DbObjectName="Специальности" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Специальности` WHERE ((`Id_специальности` = ?) AND ((? = 1 AND `Название_специальности` IS NULL) OR (`Название_специальности` = ?)))</CommandText>
@@ -1005,7 +994,7 @@
               <xs:element name="Название_диагноза" msprop:Generator_ColumnPropNameInRow="Название_диагноза" msprop:Generator_ColumnPropNameInTable="Название_диагнозаColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание_диагноза" msprop:Generator_UserColumnName="Название_диагноза" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="536870910" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1016,6 +1005,8 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_записи_в_медкарте" msprop:Generator_ColumnPropNameInRow="Id_записи_в_медкарте" msprop:Generator_ColumnPropNameInTable="Id_записи_в_медкартеColumn" msprop:Generator_ColumnVarNameInTable="columnId_записи_в_медкарте" msprop:Generator_UserColumnName="Id_записи_в_медкарте" type="xs:int" />
+              <xs:element name="Id_медкарты" msprop:Generator_ColumnPropNameInRow="Id_медкарты" msprop:Generator_ColumnPropNameInTable="Id_медкартыColumn" msprop:Generator_ColumnVarNameInTable="columnId_медкарты" msprop:Generator_UserColumnName="Id_медкарты" type="xs:int" minOccurs="0" />
+              <xs:element name="Id_записи_на_приём" msprop:Generator_ColumnPropNameInRow="Id_записи_на_приём" msprop:Generator_ColumnPropNameInTable="Id_записи_на_приёмColumn" msprop:Generator_ColumnVarNameInTable="columnId_записи_на_приём" msprop:Generator_UserColumnName="Id_записи_на_приём" type="xs:int" minOccurs="0" />
               <xs:element name="Жалобы_пациента" msprop:Generator_ColumnPropNameInRow="Жалобы_пациента" msprop:Generator_ColumnPropNameInTable="Жалобы_пациентаColumn" msprop:Generator_ColumnVarNameInTable="columnЖалобы_пациента" msprop:Generator_UserColumnName="Жалобы_пациента" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1024,8 +1015,6 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Id_диагноза" msprop:Generator_ColumnPropNameInRow="Id_диагноза" msprop:Generator_ColumnPropNameInTable="Id_диагнозаColumn" msprop:Generator_ColumnVarNameInTable="columnId_диагноза" msprop:Generator_UserColumnName="Id_диагноза" type="xs:int" minOccurs="0" />
-              <xs:element name="Id_записи_на_приём" msprop:Generator_ColumnPropNameInRow="Id_записи_на_приём" msprop:Generator_ColumnPropNameInTable="Id_записи_на_приёмColumn" msprop:Generator_ColumnVarNameInTable="columnId_записи_на_приём" msprop:Generator_UserColumnName="Id_записи_на_приём" type="xs:int" minOccurs="0" />
-              <xs:element name="Id_медкарты" msprop:Generator_ColumnPropNameInRow="Id_медкарты" msprop:Generator_ColumnPropNameInTable="Id_медкартыColumn" msprop:Generator_ColumnVarNameInTable="columnId_медкарты" msprop:Generator_UserColumnName="Id_медкарты" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1087,9 +1076,9 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_медкарты" msprop:Generator_ColumnPropNameInRow="Id_медкарты" msprop:Generator_ColumnPropNameInTable="Id_медкартыColumn" msprop:Generator_ColumnVarNameInTable="columnId_медкарты" msprop:Generator_UserColumnName="Id_медкарты" type="xs:int" />
+              <xs:element name="Id_пациента" msprop:Generator_ColumnPropNameInRow="Id_пациента" msprop:Generator_ColumnPropNameInTable="Id_пациентаColumn" msprop:Generator_ColumnVarNameInTable="columnId_пациента" msprop:Generator_UserColumnName="Id_пациента" type="xs:int" minOccurs="0" />
               <xs:element name="Дата_создания" msprop:Generator_ColumnPropNameInRow="Дата_создания" msprop:Generator_ColumnPropNameInTable="Дата_созданияColumn" msprop:Generator_ColumnVarNameInTable="columnДата_создания" msprop:Generator_UserColumnName="Дата_создания" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Дата_последнего_обновления" msprop:Generator_ColumnPropNameInRow="Дата_последнего_обновления" msprop:Generator_ColumnPropNameInTable="Дата_последнего_обновленияColumn" msprop:Generator_ColumnVarNameInTable="columnДата_последнего_обновления" msprop:Generator_UserColumnName="Дата_последнего_обновления" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Id_пациента" msprop:Generator_ColumnPropNameInRow="Id_пациента" msprop:Generator_ColumnPropNameInTable="Id_пациентаColumn" msprop:Generator_ColumnVarNameInTable="columnId_пациента" msprop:Generator_UserColumnName="Id_пациента" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1097,9 +1086,8 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_оказанной_услуги" msprop:Generator_ColumnPropNameInRow="Id_оказанной_услуги" msprop:Generator_ColumnPropNameInTable="Id_оказанной_услугиColumn" msprop:Generator_ColumnVarNameInTable="columnId_оказанной_услуги" msprop:Generator_UserColumnName="Id_оказанной_услуги" type="xs:int" />
-              <xs:element name="Id_медицинской_услуги" msprop:Generator_ColumnPropNameInRow="Id_медицинской_услуги" msprop:Generator_ColumnPropNameInTable="Id_медицинской_услугиColumn" msprop:Generator_ColumnVarNameInTable="columnId_медицинской_услуги" msprop:Generator_UserColumnName="Id_медицинской_услуги" type="xs:int" minOccurs="0" />
-              <xs:element name="Дата_оказания" msprop:Generator_ColumnPropNameInRow="Дата_оказания" msprop:Generator_ColumnPropNameInTable="Дата_оказанияColumn" msprop:Generator_ColumnVarNameInTable="columnДата_оказания" msprop:Generator_UserColumnName="Дата_оказания" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Id_записи_на_приём" msprop:Generator_ColumnPropNameInRow="Id_записи_на_приём" msprop:Generator_ColumnPropNameInTable="Id_записи_на_приёмColumn" msprop:Generator_ColumnVarNameInTable="columnId_записи_на_приём" msprop:Generator_UserColumnName="Id_записи_на_приём" type="xs:int" minOccurs="0" />
+              <xs:element name="Id_медицинской_услуги" msprop:Generator_ColumnPropNameInRow="Id_медицинской_услуги" msprop:Generator_ColumnPropNameInTable="Id_медицинской_услугиColumn" msprop:Generator_ColumnVarNameInTable="columnId_медицинской_услуги" msprop:Generator_UserColumnName="Id_медицинской_услуги" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1171,6 +1159,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_платежа" msprop:Generator_ColumnPropNameInRow="Id_платежа" msprop:Generator_ColumnPropNameInTable="Id_платежаColumn" msprop:Generator_ColumnVarNameInTable="columnId_платежа" msprop:Generator_UserColumnName="Id_платежа" type="xs:int" />
+              <xs:element name="Id_оказанной_услуги" msprop:Generator_ColumnPropNameInRow="Id_оказанной_услуги" msprop:Generator_ColumnPropNameInTable="Id_оказанной_услугиColumn" msprop:Generator_ColumnVarNameInTable="columnId_оказанной_услуги" msprop:Generator_UserColumnName="Id_оказанной_услуги" type="xs:int" minOccurs="0" />
               <xs:element name="Способ_оплаты" msprop:Generator_ColumnPropNameInRow="Способ_оплаты" msprop:Generator_ColumnPropNameInTable="Способ_оплатыColumn" msprop:Generator_ColumnVarNameInTable="columnСпособ_оплаты" msprop:Generator_UserColumnName="Способ_оплаты" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1185,14 +1174,13 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Id_оказанной_услуги" msprop:Generator_ColumnPropNameInRow="Id_оказанной_услуги" msprop:Generator_ColumnPropNameInTable="Id_оказанной_услугиColumn" msprop:Generator_ColumnVarNameInTable="columnId_оказанной_услуги" msprop:Generator_UserColumnName="Id_оказанной_услуги" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="Приёмы_врачей" msprop:Generator_RowEvHandlerName="Приёмы_врачейRowChangeEventHandler" msprop:Generator_RowDeletedName="Приёмы_врачейRowDeleted" msprop:Generator_RowDeletingName="Приёмы_врачейRowDeleting" msprop:Generator_RowEvArgName="Приёмы_врачейRowChangeEvent" msprop:Generator_TablePropName="Приёмы_врачей" msprop:Generator_RowChangedName="Приёмы_врачейRowChanged" msprop:Generator_RowChangingName="Приёмы_врачейRowChanging" msprop:Generator_TableClassName="Приёмы_врачейDataTable" msprop:Generator_RowClassName="Приёмы_врачейRow" msprop:Generator_TableVarName="tableПриёмы_врачей" msprop:Generator_UserTableName="Приёмы_врачей">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id_приёма" msprop:Generator_ColumnPropNameInRow="Id_приёма" msprop:Generator_ColumnPropNameInTable="Id_приёмаColumn" msprop:Generator_ColumnVarNameInTable="columnId_приёма" msprop:Generator_UserColumnName="Id_приёма" type="xs:int" />
+              <xs:element name="Id_приёма_врача" msprop:Generator_ColumnPropNameInRow="Id_приёма_врача" msprop:Generator_ColumnPropNameInTable="Id_приёма_врачаColumn" msprop:Generator_ColumnVarNameInTable="columnId_приёма_врача" msprop:Generator_UserColumnName="Id_приёма_врача" type="xs:int" />
               <xs:element name="Дата_приёма" msprop:Generator_ColumnPropNameInRow="Дата_приёма" msprop:Generator_ColumnPropNameInTable="Дата_приёмаColumn" msprop:Generator_ColumnVarNameInTable="columnДата_приёма" msprop:Generator_UserColumnName="Дата_приёма" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Время_начала" msprop:Generator_ColumnPropNameInRow="Время_начала" msprop:Generator_ColumnPropNameInTable="Время_началаColumn" msprop:Generator_ColumnVarNameInTable="columnВремя_начала" msprop:Generator_UserColumnName="Время_начала" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Время_окончания" msprop:Generator_ColumnPropNameInRow="Время_окончания" msprop:Generator_ColumnPropNameInTable="Время_окончанияColumn" msprop:Generator_ColumnVarNameInTable="columnВремя_окончания" msprop:Generator_UserColumnName="Время_окончания" type="xs:dateTime" minOccurs="0" />
@@ -1205,6 +1193,8 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_рецепта" msprop:Generator_ColumnPropNameInRow="Id_рецепта" msprop:Generator_ColumnPropNameInTable="Id_рецептаColumn" msprop:Generator_ColumnVarNameInTable="columnId_рецепта" msprop:Generator_UserColumnName="Id_рецепта" type="xs:int" />
+              <xs:element name="Id_записи_в_медкарте" msprop:Generator_ColumnPropNameInRow="Id_записи_в_медкарте" msprop:Generator_ColumnPropNameInTable="Id_записи_в_медкартеColumn" msprop:Generator_ColumnVarNameInTable="columnId_записи_в_медкарте" msprop:Generator_UserColumnName="Id_записи_в_медкарте" type="xs:int" minOccurs="0" />
+              <xs:element name="Id_лекарства" msprop:Generator_ColumnPropNameInRow="Id_лекарства" msprop:Generator_ColumnPropNameInTable="Id_лекарстваColumn" msprop:Generator_ColumnVarNameInTable="columnId_лекарства" msprop:Generator_UserColumnName="Id_лекарства" type="xs:int" minOccurs="0" />
               <xs:element name="Дата_выписки" msprop:Generator_ColumnPropNameInRow="Дата_выписки" msprop:Generator_ColumnPropNameInTable="Дата_выпискиColumn" msprop:Generator_ColumnVarNameInTable="columnДата_выписки" msprop:Generator_UserColumnName="Дата_выписки" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Срок_действия" msprop:Generator_ColumnPropNameInRow="Срок_действия" msprop:Generator_ColumnPropNameInTable="Срок_действияColumn" msprop:Generator_ColumnVarNameInTable="columnСрок_действия" msprop:Generator_UserColumnName="Срок_действия" minOccurs="0">
                 <xs:simpleType>
@@ -1220,8 +1210,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Id_лекарства" msprop:Generator_ColumnPropNameInRow="Id_лекарства" msprop:Generator_ColumnPropNameInTable="Id_лекарстваColumn" msprop:Generator_ColumnVarNameInTable="columnId_лекарства" msprop:Generator_UserColumnName="Id_лекарства" type="xs:int" minOccurs="0" />
-              <xs:element name="Id_записи_в_медкарте" msprop:Generator_ColumnPropNameInRow="Id_записи_в_медкарте" msprop:Generator_ColumnPropNameInTable="Id_записи_в_медкартеColumn" msprop:Generator_ColumnVarNameInTable="columnId_записи_в_медкарте" msprop:Generator_UserColumnName="Id_записи_в_медкарте" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1291,7 +1279,7 @@
     </xs:unique>
     <xs:unique name="Приёмы_врачей_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Приёмы_врачей" />
-      <xs:field xpath="mstns:Id_приёма" />
+      <xs:field xpath="mstns:Id_приёма_врача" />
     </xs:unique>
     <xs:unique name="Рецепты_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Рецепты" />
@@ -1308,7 +1296,7 @@
       <msdata:Relationship name="R_x002F_18" msdata:parent="Диагнозы" msdata:child="Записи_в_медкарте" msdata:parentkey="Id_диагноза" msdata:childkey="Id_диагноза" msprop:Generator_UserParentTable="Диагнозы" msprop:Generator_UserChildTable="Записи_в_медкарте" msprop:Generator_RelationVarName="_relationR_18" msprop:Generator_ChildPropName="GetЗаписи_в_медкартеRows" msprop:Generator_ParentPropName="ДиагнозыRow" msprop:Generator_UserRelationName="R/18" />
       <msdata:Relationship name="R_x002F_45" msdata:parent="Запись_на_приём" msdata:child="Записи_в_медкарте" msdata:parentkey="Id_записи_на_приём" msdata:childkey="Id_записи_на_приём" msprop:Generator_UserParentTable="Запись_на_приём" msprop:Generator_UserChildTable="Записи_в_медкарте" msprop:Generator_RelationVarName="_relationR_45" msprop:Generator_UserRelationName="R/45" msprop:Generator_ChildPropName="GetЗаписи_в_медкартеRows" msprop:Generator_ParentPropName="Запись_на_приёмRow" />
       <msdata:Relationship name="R_x002F_51" msdata:parent="Медкарты" msdata:child="Записи_в_медкарте" msdata:parentkey="Id_медкарты" msdata:childkey="Id_медкарты" msprop:Generator_UserParentTable="Медкарты" msprop:Generator_UserChildTable="Записи_в_медкарте" msprop:Generator_RelationVarName="_relationR_51" msprop:Generator_UserRelationName="R/51" msprop:Generator_ChildPropName="GetЗаписи_в_медкартеRows" msprop:Generator_ParentPropName="МедкартыRow" />
-      <msdata:Relationship name="R_x002F_12" msdata:parent="Приёмы_врачей" msdata:child="Запись_на_приём" msdata:parentkey="Id_приёма" msdata:childkey="Id_приёма_врача" msprop:Generator_UserParentTable="Приёмы_врачей" msprop:Generator_UserChildTable="Запись_на_приём" msprop:Generator_RelationVarName="_relationR_12" msprop:Generator_UserRelationName="R/12" msprop:Generator_ChildPropName="GetЗапись_на_приёмRows" msprop:Generator_ParentPropName="Приёмы_врачейRow" />
+      <msdata:Relationship name="R_x002F_12" msdata:parent="Приёмы_врачей" msdata:child="Запись_на_приём" msdata:parentkey="Id_приёма_врача" msdata:childkey="Id_приёма_врача" msprop:Generator_UserParentTable="Приёмы_врачей" msprop:Generator_UserChildTable="Запись_на_приём" msprop:Generator_RelationVarName="_relationR_12" msprop:Generator_UserRelationName="R/12" msprop:Generator_ChildPropName="GetЗапись_на_приёмRows" msprop:Generator_ParentPropName="Приёмы_врачейRow" />
       <msdata:Relationship name="R_x002F_39" msdata:parent="Пациенты" msdata:child="Запись_на_приём" msdata:parentkey="Id_пациента" msdata:childkey="Id_пациента" msprop:Generator_UserParentTable="Пациенты" msprop:Generator_UserChildTable="Запись_на_приём" msprop:Generator_RelationVarName="_relationR_39" msprop:Generator_UserRelationName="R/39" msprop:Generator_ChildPropName="GetЗапись_на_приёмRows" msprop:Generator_ParentPropName="ПациентыRow" />
       <msdata:Relationship name="R_x002F_27" msdata:parent="Отделения" msdata:child="Кабинеты" msdata:parentkey="Id_отделения" msdata:childkey="Id_отделения" msprop:Generator_UserParentTable="Отделения" msprop:Generator_UserChildTable="Кабинеты" msprop:Generator_RelationVarName="_relationR_27" msprop:Generator_UserRelationName="R/27" msprop:Generator_ChildPropName="GetКабинетыRows" msprop:Generator_ParentPropName="ОтделенияRow" />
       <msdata:Relationship name="R_x002F_54" msdata:parent="Пациенты" msdata:child="Медкарты" msdata:parentkey="Id_пациента" msdata:childkey="Id_пациента" msprop:Generator_UserParentTable="Пациенты" msprop:Generator_UserChildTable="Медкарты" msprop:Generator_RelationVarName="_relationR_54" msprop:Generator_UserRelationName="R/54" msprop:Generator_ChildPropName="GetМедкартыRows" msprop:Generator_ParentPropName="ПациентыRow" />
