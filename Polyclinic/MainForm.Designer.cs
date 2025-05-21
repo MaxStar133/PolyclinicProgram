@@ -90,9 +90,6 @@
             this.оплаченныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.неоплаченныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ожидаютсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.кабинетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.свободныеКабинетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поискПоОтделениюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.записиНаПриёмToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.зToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отменённыеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -144,6 +141,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(967, 462);
             this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // treeView1
             // 
@@ -215,7 +213,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.70112F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.29888F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel3.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonEndEdit, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonCancelEdit, 2, 0);
@@ -288,7 +286,6 @@
             this.пациентToolStripMenuItem,
             this.поискВрачаToolStripMenuItem,
             this.неоплаченныеПлатежиToolStripMenuItem,
-            this.кабинетыToolStripMenuItem,
             this.записиНаПриёмToolStripMenuItem1});
             this.запросыToolStripMenuItem.Name = "запросыToolStripMenuItem";
             this.запросыToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
@@ -334,18 +331,21 @@
             this.рецептыToolStripMenuItem.Name = "рецептыToolStripMenuItem";
             this.рецептыToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.рецептыToolStripMenuItem.Text = "Рецепты";
+            this.рецептыToolStripMenuItem.Click += new System.EventHandler(this.рецептыToolStripMenuItem_Click);
             // 
             // оказанныеУслугиToolStripMenuItem
             // 
             this.оказанныеУслугиToolStripMenuItem.Name = "оказанныеУслугиToolStripMenuItem";
             this.оказанныеУслугиToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.оказанныеУслугиToolStripMenuItem.Text = "Оказанные услуги";
+            this.оказанныеУслугиToolStripMenuItem.Click += new System.EventHandler(this.оказанныеУслугиToolStripMenuItem_Click);
             // 
             // платежиToolStripMenuItem
             // 
             this.платежиToolStripMenuItem.Name = "платежиToolStripMenuItem";
             this.платежиToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.платежиToolStripMenuItem.Text = "Платежи";
+            this.платежиToolStripMenuItem.Click += new System.EventHandler(this.платежиToolStripMenuItem_Click);
             // 
             // полToolStripMenuItem
             // 
@@ -392,12 +392,14 @@
             this.приёмыToolStripMenuItem.Name = "приёмыToolStripMenuItem";
             this.приёмыToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.приёмыToolStripMenuItem.Text = "Приёмы";
+            this.приёмыToolStripMenuItem.Click += new System.EventHandler(this.приёмыToolStripMenuItem_Click);
             // 
             // оказанныеУслугиToolStripMenuItem1
             // 
             this.оказанныеУслугиToolStripMenuItem1.Name = "оказанныеУслугиToolStripMenuItem1";
             this.оказанныеУслугиToolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
             this.оказанныеУслугиToolStripMenuItem1.Text = "Оказанные услуги";
+            this.оказанныеУслугиToolStripMenuItem1.Click += new System.EventHandler(this.оказанныеУслугиToolStripMenuItem1_Click);
             // 
             // неоплаченныеПлатежиToolStripMenuItem
             // 
@@ -429,27 +431,6 @@
             this.ожидаютсяToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.ожидаютсяToolStripMenuItem.Text = "Ожидаются";
             this.ожидаютсяToolStripMenuItem.Click += new System.EventHandler(this.ожидаютсяToolStripMenuItem_Click);
-            // 
-            // кабинетыToolStripMenuItem
-            // 
-            this.кабинетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.свободныеКабинетыToolStripMenuItem,
-            this.поискПоОтделениюToolStripMenuItem});
-            this.кабинетыToolStripMenuItem.Name = "кабинетыToolStripMenuItem";
-            this.кабинетыToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.кабинетыToolStripMenuItem.Text = "Кабинеты";
-            // 
-            // свободныеКабинетыToolStripMenuItem
-            // 
-            this.свободныеКабинетыToolStripMenuItem.Name = "свободныеКабинетыToolStripMenuItem";
-            this.свободныеКабинетыToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.свободныеКабинетыToolStripMenuItem.Text = "Свободные кабинеты";
-            // 
-            // поискПоОтделениюToolStripMenuItem
-            // 
-            this.поискПоОтделениюToolStripMenuItem.Name = "поискПоОтделениюToolStripMenuItem";
-            this.поискПоОтделениюToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.поискПоОтделениюToolStripMenuItem.Text = "Поиск по отделению";
             // 
             // записиНаПриёмToolStripMenuItem1
             // 
@@ -494,7 +475,7 @@
             this.buttonEndEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEndEdit.Location = new System.Drawing.Point(644, 3);
+            this.buttonEndEdit.Location = new System.Drawing.Point(643, 3);
             this.buttonEndEdit.Name = "buttonEndEdit";
             this.buttonEndEdit.Size = new System.Drawing.Size(157, 24);
             this.buttonEndEdit.TabIndex = 2;
@@ -507,9 +488,9 @@
             this.buttonCancelEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancelEdit.Location = new System.Drawing.Point(807, 3);
+            this.buttonCancelEdit.Location = new System.Drawing.Point(806, 3);
             this.buttonCancelEdit.Name = "buttonCancelEdit";
-            this.buttonCancelEdit.Size = new System.Drawing.Size(163, 24);
+            this.buttonCancelEdit.Size = new System.Drawing.Size(164, 24);
             this.buttonCancelEdit.TabIndex = 3;
             this.buttonCancelEdit.Text = "Отменить изменения";
             this.buttonCancelEdit.UseVisualStyleBackColor = true;
@@ -578,11 +559,8 @@
         private System.Windows.Forms.ToolStripMenuItem оплаченныеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem неоплаченныеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ожидаютсяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem кабинетыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem свободныеКабинетыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem записиНаПриёмToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem зToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поискПоОтделениюToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отменённыеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ожидаютсяToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem полToolStripMenuItem;
