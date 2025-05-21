@@ -221,7 +221,7 @@ namespace Polyclinic
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
 
-                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
                 cmd.Parameters.AddWithValue("", $"%{firstName}%");
                 cmd.Parameters.AddWithValue("", $"%{middleName}%");
 
@@ -260,7 +260,7 @@ namespace Polyclinic
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
 
-                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
                 cmd.Parameters.AddWithValue("", $"%{firstName}%");
                 cmd.Parameters.AddWithValue("", $"%{middleName}%");
 
@@ -301,7 +301,7 @@ namespace Polyclinic
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
 
-                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
                 cmd.Parameters.AddWithValue("", $"%{firstName}%");
                 cmd.Parameters.AddWithValue("", $"%{middleName}%");
 
@@ -341,7 +341,7 @@ namespace Polyclinic
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
 
-                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
                 cmd.Parameters.AddWithValue("", $"%{firstName}%");
                 cmd.Parameters.AddWithValue("", $"%{middleName}%");
 
@@ -382,7 +382,7 @@ namespace Polyclinic
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
 
-                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
                 cmd.Parameters.AddWithValue("", $"%{firstName}%");
                 cmd.Parameters.AddWithValue("", $"%{middleName}%");
 
@@ -421,7 +421,7 @@ namespace Polyclinic
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
 
-                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
                 cmd.Parameters.AddWithValue("", $"%{firstName}%");
                 cmd.Parameters.AddWithValue("", $"%{middleName}%");
 
@@ -454,7 +454,7 @@ namespace Polyclinic
                 string query = @"SELECT Оказанные_услуги.*
                                 FROM ((Оказанные_услуги
                                 INNER JOIN Запись_на_приём ON Оказанные_услуги.Id_записи_на_приём = Запись_на_приём.Id_записи_на_приём)
-                                INNER JOIN Приёмы_врачей ON Запись_на_приём.Id_приёма = Приёмы_врачей.Id_приёма)
+                                INNER JOIN Приёмы_врачей ON Запись_на_приём.Id_приёма_врача = Приёмы_врачей.Id_приёма_врача)
                                 INNER JOIN Врачи ON Приёмы_врачей.Id_врача = Врачи.Id_врача
                                 WHERE Врачи.Фамилия LIKE ?
                                 AND Врачи.Имя LIKE ?
@@ -463,7 +463,7 @@ namespace Polyclinic
                 OleDbCommand cmd = new OleDbCommand(query, conn);
 
 
-                cmd.Parameters.AddWithValue("", $" %{surName}%");
+                cmd.Parameters.AddWithValue("", $"%{surName}%");
                 cmd.Parameters.AddWithValue("", $"%{firstName}%");
                 cmd.Parameters.AddWithValue("", $"%{middleName}%");
 

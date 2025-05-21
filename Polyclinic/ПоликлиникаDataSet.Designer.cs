@@ -632,7 +632,7 @@ namespace Polyclinic {
                         this.tableЗаписи_в_медкарте.Id_медкартыColumn}, false);
             this.Relations.Add(this._relationR_51);
             this._relationR_12 = new global::System.Data.DataRelation("R/12", new global::System.Data.DataColumn[] {
-                        this.tableПриёмы_врачей.Id_приёма_врачаColumn}, new global::System.Data.DataColumn[] {
+                        this.tableПриёмы_врачей.Id_приёмаColumn}, new global::System.Data.DataColumn[] {
                         this.tableЗапись_на_приём.Id_приёма_врачаColumn}, false);
             this.Relations.Add(this._relationR_12);
             this._relationR_39 = new global::System.Data.DataRelation("R/39", new global::System.Data.DataColumn[] {
@@ -1944,7 +1944,7 @@ namespace Polyclinic {
                     columnValuesArray[2] = _parentПриёмы_врачейRowByR_12[0];
                 }
                 if ((_parentПациентыRowByR_39 != null)) {
-                    columnValuesArray[3] = _parentПациентыRowByR_39[7];
+                    columnValuesArray[3] = _parentПациентыRowByR_39[0];
                 }
                 rowЗапись_на_приёмRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowЗапись_на_приёмRow);
@@ -3097,7 +3097,7 @@ namespace Polyclinic {
                         Дата_последнего_обновления,
                         null};
                 if ((_parentПациентыRowByR_54 != null)) {
-                    columnValuesArray[3] = _parentПациентыRowByR_54[7];
+                    columnValuesArray[3] = _parentПациентыRowByR_54[0];
                 }
                 rowМедкартыRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowМедкартыRow);
@@ -3861,9 +3861,11 @@ namespace Polyclinic {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ПациентыDataTable : global::System.Data.TypedTableBase<ПациентыRow> {
             
-            private global::System.Data.DataColumn columnИмя;
+            private global::System.Data.DataColumn columnId_пациента;
             
             private global::System.Data.DataColumn columnФамилия;
+            
+            private global::System.Data.DataColumn columnИмя;
             
             private global::System.Data.DataColumn columnОтчество;
             
@@ -3874,8 +3876,6 @@ namespace Polyclinic {
             private global::System.Data.DataColumn columnНомер_полиса;
             
             private global::System.Data.DataColumn columnТелефон;
-            
-            private global::System.Data.DataColumn columnId_пациента;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -3912,9 +3912,9 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ИмяColumn {
+            public global::System.Data.DataColumn Id_пациентаColumn {
                 get {
-                    return this.columnИмя;
+                    return this.columnId_пациента;
                 }
             }
             
@@ -3923,6 +3923,14 @@ namespace Polyclinic {
             public global::System.Data.DataColumn ФамилияColumn {
                 get {
                     return this.columnФамилия;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ИмяColumn {
+                get {
+                    return this.columnИмя;
                 }
             }
             
@@ -3968,14 +3976,6 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Id_пациентаColumn {
-                get {
-                    return this.columnId_пациента;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4011,17 +4011,17 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ПациентыRow AddПациентыRow(string Имя, string Фамилия, string Отчество, System.DateTime Дата_рождения, string Пол, string Номер_полиса, string Телефон, int Id_пациента) {
+            public ПациентыRow AddПациентыRow(int Id_пациента, string Фамилия, string Имя, string Отчество, System.DateTime Дата_рождения, string Пол, string Номер_полиса, string Телефон) {
                 ПациентыRow rowПациентыRow = ((ПациентыRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Имя,
+                        Id_пациента,
                         Фамилия,
+                        Имя,
                         Отчество,
                         Дата_рождения,
                         Пол,
                         Номер_полиса,
-                        Телефон,
-                        Id_пациента};
+                        Телефон};
                 rowПациентыRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowПациентыRow);
                 return rowПациентыRow;
@@ -4051,23 +4051,25 @@ namespace Polyclinic {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnИмя = base.Columns["Имя"];
+                this.columnId_пациента = base.Columns["Id_пациента"];
                 this.columnФамилия = base.Columns["Фамилия"];
+                this.columnИмя = base.Columns["Имя"];
                 this.columnОтчество = base.Columns["Отчество"];
                 this.columnДата_рождения = base.Columns["Дата_рождения"];
                 this.columnПол = base.Columns["Пол"];
                 this.columnНомер_полиса = base.Columns["Номер_полиса"];
                 this.columnТелефон = base.Columns["Телефон"];
-                this.columnId_пациента = base.Columns["Id_пациента"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnИмя = new global::System.Data.DataColumn("Имя", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnИмя);
+                this.columnId_пациента = new global::System.Data.DataColumn("Id_пациента", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_пациента);
                 this.columnФамилия = new global::System.Data.DataColumn("Фамилия", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnФамилия);
+                this.columnИмя = new global::System.Data.DataColumn("Имя", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnИмя);
                 this.columnОтчество = new global::System.Data.DataColumn("Отчество", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnОтчество);
                 this.columnДата_рождения = new global::System.Data.DataColumn("Дата_рождения", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -4078,18 +4080,16 @@ namespace Polyclinic {
                 base.Columns.Add(this.columnНомер_полиса);
                 this.columnТелефон = new global::System.Data.DataColumn("Телефон", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnТелефон);
-                this.columnId_пациента = new global::System.Data.DataColumn("Id_пациента", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_пациента);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_пациента}, true));
-                this.columnИмя.MaxLength = 20;
-                this.columnФамилия.MaxLength = 20;
-                this.columnОтчество.MaxLength = 20;
-                this.columnПол.MaxLength = 255;
-                this.columnНомер_полиса.MaxLength = 50;
-                this.columnТелефон.MaxLength = 12;
                 this.columnId_пациента.AllowDBNull = false;
                 this.columnId_пациента.Unique = true;
+                this.columnФамилия.MaxLength = 20;
+                this.columnИмя.MaxLength = 20;
+                this.columnОтчество.MaxLength = 20;
+                this.columnПол.MaxLength = 255;
+                this.columnНомер_полиса.MaxLength = 16;
+                this.columnТелефон.MaxLength = 12;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4528,7 +4528,7 @@ namespace Polyclinic {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Приёмы_врачейDataTable : global::System.Data.TypedTableBase<Приёмы_врачейRow> {
             
-            private global::System.Data.DataColumn columnId_приёма_врача;
+            private global::System.Data.DataColumn columnId_приёма;
             
             private global::System.Data.DataColumn columnДата_приёма;
             
@@ -4575,9 +4575,9 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Id_приёма_врачаColumn {
+            public global::System.Data.DataColumn Id_приёмаColumn {
                 get {
-                    return this.columnId_приёма_врача;
+                    return this.columnId_приёма;
                 }
             }
             
@@ -4658,10 +4658,10 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Приёмы_врачейRow AddПриёмы_врачейRow(int Id_приёма_врача, System.DateTime Дата_приёма, System.DateTime Время_начала, System.DateTime Время_окончания, ВрачиRow _parentВрачиRowByR_40, КабинетыRow _parentКабинетыRowByR_43) {
+            public Приёмы_врачейRow AddПриёмы_врачейRow(int Id_приёма, System.DateTime Дата_приёма, System.DateTime Время_начала, System.DateTime Время_окончания, ВрачиRow _parentВрачиRowByR_40, КабинетыRow _parentКабинетыRowByR_43) {
                 Приёмы_врачейRow rowПриёмы_врачейRow = ((Приёмы_врачейRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id_приёма_врача,
+                        Id_приёма,
                         Дата_приёма,
                         Время_начала,
                         Время_окончания,
@@ -4680,9 +4680,9 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Приёмы_врачейRow FindById_приёма_врача(int Id_приёма_врача) {
+            public Приёмы_врачейRow FindById_приёма(int Id_приёма) {
                 return ((Приёмы_врачейRow)(this.Rows.Find(new object[] {
-                            Id_приёма_врача})));
+                            Id_приёма})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4702,7 +4702,7 @@ namespace Polyclinic {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnId_приёма_врача = base.Columns["Id_приёма_врача"];
+                this.columnId_приёма = base.Columns["Id_приёма"];
                 this.columnДата_приёма = base.Columns["Дата_приёма"];
                 this.columnВремя_начала = base.Columns["Время_начала"];
                 this.columnВремя_окончания = base.Columns["Время_окончания"];
@@ -4713,8 +4713,8 @@ namespace Polyclinic {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId_приёма_врача = new global::System.Data.DataColumn("Id_приёма_врача", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_приёма_врача);
+                this.columnId_приёма = new global::System.Data.DataColumn("Id_приёма", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_приёма);
                 this.columnДата_приёма = new global::System.Data.DataColumn("Дата_приёма", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДата_приёма);
                 this.columnВремя_начала = new global::System.Data.DataColumn("Время_начала", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -4726,9 +4726,9 @@ namespace Polyclinic {
                 this.columnId_кабинета = new global::System.Data.DataColumn("Id_кабинета", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId_кабинета);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId_приёма_врача}, true));
-                this.columnId_приёма_врача.AllowDBNull = false;
-                this.columnId_приёма_врача.Unique = true;
+                                this.columnId_приёма}, true));
+                this.columnId_приёма.AllowDBNull = false;
+                this.columnId_приёма.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6704,17 +6704,12 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Имя {
+            public int Id_пациента {
                 get {
-                    try {
-                        return ((string)(this[this.tableПациенты.ИмяColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Имя\' в таблице \'Пациенты\' равно DBNull.", e);
-                    }
+                    return ((int)(this[this.tableПациенты.Id_пациентаColumn]));
                 }
                 set {
-                    this[this.tableПациенты.ИмяColumn] = value;
+                    this[this.tableПациенты.Id_пациентаColumn] = value;
                 }
             }
             
@@ -6731,6 +6726,22 @@ namespace Polyclinic {
                 }
                 set {
                     this[this.tableПациенты.ФамилияColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Имя {
+                get {
+                    try {
+                        return ((string)(this[this.tableПациенты.ИмяColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Имя\' в таблице \'Пациенты\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПациенты.ИмяColumn] = value;
                 }
             }
             
@@ -6816,13 +6827,14 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id_пациента {
-                get {
-                    return ((int)(this[this.tableПациенты.Id_пациентаColumn]));
-                }
-                set {
-                    this[this.tableПациенты.Id_пациентаColumn] = value;
-                }
+            public bool IsФамилияNull() {
+                return this.IsNull(this.tableПациенты.ФамилияColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetФамилияNull() {
+                this[this.tableПациенты.ФамилияColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6835,18 +6847,6 @@ namespace Polyclinic {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetИмяNull() {
                 this[this.tableПациенты.ИмяColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsФамилияNull() {
-                return this.IsNull(this.tableПациенты.ФамилияColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetФамилияNull() {
-                this[this.tableПациенты.ФамилияColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7069,12 +7069,12 @@ namespace Polyclinic {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id_приёма_врача {
+            public int Id_приёма {
                 get {
-                    return ((int)(this[this.tableПриёмы_врачей.Id_приёма_врачаColumn]));
+                    return ((int)(this[this.tableПриёмы_врачей.Id_приёмаColumn]));
                 }
                 set {
-                    this[this.tableПриёмы_врачей.Id_приёма_врачаColumn] = value;
+                    this[this.tableПриёмы_врачей.Id_приёмаColumn] = value;
                 }
             }
             
@@ -11717,23 +11717,24 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Пациенты";
-            tableMapping.ColumnMappings.Add("Имя", "Имя");
+            tableMapping.ColumnMappings.Add("Id_пациента", "Id_пациента");
             tableMapping.ColumnMappings.Add("Фамилия", "Фамилия");
+            tableMapping.ColumnMappings.Add("Имя", "Имя");
             tableMapping.ColumnMappings.Add("Отчество", "Отчество");
             tableMapping.ColumnMappings.Add("Дата_рождения", "Дата_рождения");
             tableMapping.ColumnMappings.Add("Пол", "Пол");
             tableMapping.ColumnMappings.Add("Номер_полиса", "Номер_полиса");
             tableMapping.ColumnMappings.Add("Телефон", "Телефон");
-            tableMapping.ColumnMappings.Add("Id_пациента", "Id_пациента");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Пациенты` WHERE (((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Дата_рождения` IS NULL) OR (`Дата_рождения` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Номер_полиса` IS NULL) OR (`Номер_полиса` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Телефон` = ?)) AND (`Id_пациента` = ?))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Пациенты` WHERE ((`Id_пациента` = ?) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Дата_рождения` IS NULL) OR (`Дата_рождения` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Номер_полиса` IS NULL) OR (`Номер_полиса` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Телефон` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Имя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Фамилия", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Фамилия", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Имя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Отчество", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Отчество", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_рождения", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_рождения", global::System.Data.DataRowVersion.Original, true, null));
@@ -11744,36 +11745,36 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_полиса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_полиса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Телефон", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Пациенты` (`Имя`, `Фамилия`, `Отчество`, `Дата_рождения`, `Пол`, `Но" +
-                "мер_полиса`, `Телефон`, `Id_пациента`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Пациенты` (`Id_пациента`, `Фамилия`, `Имя`, `Отчество`, `Дата_рожден" +
+                "ия`, `Пол`, `Номер_полиса`, `Телефон`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Отчество", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_рождения", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_рождения", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_полиса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_полиса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Телефон", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Пациенты` SET `Имя` = ?, `Фамилия` = ?, `Отчество` = ?, `Дата_рождения` = ?, `Пол` = ?, `Номер_полиса` = ?, `Телефон` = ?, `Id_пациента` = ? WHERE (((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Дата_рождения` IS NULL) OR (`Дата_рождения` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Номер_полиса` IS NULL) OR (`Номер_полиса` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Телефон` = ?)) AND (`Id_пациента` = ?))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Пациенты` SET `Id_пациента` = ?, `Фамилия` = ?, `Имя` = ?, `Отчество` = ?, `Дата_рождения` = ?, `Пол` = ?, `Номер_полиса` = ?, `Телефон` = ? WHERE ((`Id_пациента` = ?) AND ((? = 1 AND `Фамилия` IS NULL) OR (`Фамилия` = ?)) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Отчество` IS NULL) OR (`Отчество` = ?)) AND ((? = 1 AND `Дата_рождения` IS NULL) OR (`Дата_рождения` = ?)) AND ((? = 1 AND `Пол` IS NULL) OR (`Пол` = ?)) AND ((? = 1 AND `Номер_полиса` IS NULL) OR (`Номер_полиса` = ?)) AND ((? = 1 AND `Телефон` IS NULL) OR (`Телефон` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Отчество", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_рождения", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_рождения", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Пол", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Пол", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_полиса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_полиса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Телефон", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Имя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Фамилия", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Фамилия", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Имя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Отчество", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Отчество", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отчество", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_рождения", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_рождения", global::System.Data.DataRowVersion.Original, true, null));
@@ -11784,7 +11785,6 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_полиса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_полиса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Телефон", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Телефон", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Телефон", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_пациента", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_пациента", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11800,8 +11800,8 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Имя, Фамилия, Отчество, Дата_рождения, Пол, Номер_полиса, Телефон, Id_паци" +
-                "ента FROM Пациенты";
+            this._commandCollection[0].CommandText = "SELECT Id_пациента, Фамилия, Имя, Отчество, Дата_рождения, Пол, Номер_полиса, Тел" +
+                "ефон FROM Пациенты";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11862,64 +11862,64 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Имя, string Original_Фамилия, string Original_Отчество, global::System.Nullable<global::System.DateTime> Original_Дата_рождения, string Original_Пол, string Original_Номер_полиса, string Original_Телефон, int Original_Id_пациента) {
-            if ((Original_Имя == null)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Имя));
-            }
+        public virtual int Delete(int Original_Id_пациента, string Original_Фамилия, string Original_Имя, string Original_Отчество, global::System.Nullable<global::System.DateTime> Original_Дата_рождения, string Original_Пол, string Original_Номер_полиса, string Original_Телефон) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_пациента));
             if ((Original_Фамилия == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Фамилия));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Фамилия));
+            }
+            if ((Original_Имя == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Имя));
             }
             if ((Original_Отчество == null)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Отчество));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Отчество));
             }
             if ((Original_Дата_рождения.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_Дата_рождения.Value));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_Дата_рождения.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             if ((Original_Пол == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_Пол));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Пол));
             }
             if ((Original_Номер_полиса == null)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_Номер_полиса));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Номер_полиса));
             }
             if ((Original_Телефон == null)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_Телефон));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Телефон));
             }
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_Id_пациента));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11940,50 +11940,50 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Имя, string Фамилия, string Отчество, global::System.Nullable<global::System.DateTime> Дата_рождения, string Пол, string Номер_полиса, string Телефон, int Id_пациента) {
-            if ((Имя == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Имя));
-            }
+        public virtual int Insert(int Id_пациента, string Фамилия, string Имя, string Отчество, global::System.Nullable<global::System.DateTime> Дата_рождения, string Пол, string Номер_полиса, string Телефон) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id_пациента));
             if ((Фамилия == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Фамилия));
             }
-            if ((Отчество == null)) {
+            if ((Имя == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Отчество));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Имя));
             }
-            if ((Дата_рождения.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Дата_рождения.Value));
-            }
-            else {
+            if ((Отчество == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Пол == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Отчество));
+            }
+            if ((Дата_рождения.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(Дата_рождения.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Пол));
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Номер_полиса == null)) {
+            if ((Пол == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Номер_полиса));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Пол));
             }
-            if ((Телефон == null)) {
+            if ((Номер_полиса == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Телефон));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Номер_полиса));
             }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Id_пациента));
+            if ((Телефон == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Телефон));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12005,122 +12005,122 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string Имя, 
+                    int Id_пациента, 
                     string Фамилия, 
+                    string Имя, 
                     string Отчество, 
                     global::System.Nullable<global::System.DateTime> Дата_рождения, 
                     string Пол, 
                     string Номер_полиса, 
                     string Телефон, 
-                    int Id_пациента, 
-                    string Original_Имя, 
+                    int Original_Id_пациента, 
                     string Original_Фамилия, 
+                    string Original_Имя, 
                     string Original_Отчество, 
                     global::System.Nullable<global::System.DateTime> Original_Дата_рождения, 
                     string Original_Пол, 
                     string Original_Номер_полиса, 
-                    string Original_Телефон, 
-                    int Original_Id_пациента) {
-            if ((Имя == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Имя));
-            }
+                    string Original_Телефон) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id_пациента));
             if ((Фамилия == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Фамилия));
             }
-            if ((Отчество == null)) {
+            if ((Имя == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Отчество));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Имя));
             }
-            if ((Дата_рождения.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Дата_рождения.Value));
-            }
-            else {
+            if ((Отчество == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Пол == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Отчество));
+            }
+            if ((Дата_рождения.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Дата_рождения.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Пол));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Номер_полиса == null)) {
+            if ((Пол == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Номер_полиса));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Пол));
             }
-            if ((Телефон == null)) {
+            if ((Номер_полиса == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Телефон));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Номер_полиса));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Id_пациента));
-            if ((Original_Имя == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            if ((Телефон == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Имя));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Телефон));
             }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Id_пациента));
             if ((Original_Фамилия == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Фамилия));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Фамилия));
+            }
+            if ((Original_Имя == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Имя));
             }
             if ((Original_Отчество == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Отчество));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Отчество));
             }
             if ((Original_Дата_рождения.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_Дата_рождения.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_Дата_рождения.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_Пол == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Пол));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Пол));
             }
             if ((Original_Номер_полиса == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Номер_полиса));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Номер_полиса));
             }
             if ((Original_Телефон == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Телефон));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Телефон));
             }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_Id_пациента));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12141,8 +12141,8 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Имя, string Фамилия, string Отчество, global::System.Nullable<global::System.DateTime> Дата_рождения, string Пол, string Номер_полиса, string Телефон, string Original_Имя, string Original_Фамилия, string Original_Отчество, global::System.Nullable<global::System.DateTime> Original_Дата_рождения, string Original_Пол, string Original_Номер_полиса, string Original_Телефон, int Original_Id_пациента) {
-            return this.Update(Имя, Фамилия, Отчество, Дата_рождения, Пол, Номер_полиса, Телефон, Original_Id_пациента, Original_Имя, Original_Фамилия, Original_Отчество, Original_Дата_рождения, Original_Пол, Original_Номер_полиса, Original_Телефон, Original_Id_пациента);
+        public virtual int Update(string Фамилия, string Имя, string Отчество, global::System.Nullable<global::System.DateTime> Дата_рождения, string Пол, string Номер_полиса, string Телефон, int Original_Id_пациента, string Original_Фамилия, string Original_Имя, string Original_Отчество, global::System.Nullable<global::System.DateTime> Original_Дата_рождения, string Original_Пол, string Original_Номер_полиса, string Original_Телефон) {
+            return this.Update(Original_Id_пациента, Фамилия, Имя, Отчество, Дата_рождения, Пол, Номер_полиса, Телефон, Original_Id_пациента, Original_Фамилия, Original_Имя, Original_Отчество, Original_Дата_рождения, Original_Пол, Original_Номер_полиса, Original_Телефон);
         }
     }
     
@@ -12639,7 +12639,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Приёмы_врачей";
-            tableMapping.ColumnMappings.Add("Id_приёма_врача", "Id_приёма_врача");
+            tableMapping.ColumnMappings.Add("Id_приёма", "Id_приёма");
             tableMapping.ColumnMappings.Add("Дата_приёма", "Дата_приёма");
             tableMapping.ColumnMappings.Add("Время_начала", "Время_начала");
             tableMapping.ColumnMappings.Add("Время_окончания", "Время_окончания");
@@ -12648,9 +12648,9 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Приёмы_врачей` WHERE ((`Id_приёма_врача` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Приёмы_врачей` WHERE ((`Id_приёма` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_приёма_врача", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма_врача", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_приёма", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_приёма", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приёма", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Дата_приёма", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приёма", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Время_начала", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Время_начала", global::System.Data.DataRowVersion.Original, true, null));
@@ -12663,10 +12663,10 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_кабинета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_кабинета", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Приёмы_врачей` (`Id_приёма_врача`, `Дата_приёма`, `Время_начала`, `В" +
-                "ремя_окончания`, `Id_врача`, `Id_кабинета`) VALUES (?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Приёмы_врачей` (`Id_приёма`, `Дата_приёма`, `Время_начала`, `Время_о" +
+                "кончания`, `Id_врача`, `Id_кабинета`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_приёма_врача", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма_врача", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_приёма", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_приёма", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приёма", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Время_начала", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Время_начала", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Время_окончания", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Время_окончания", global::System.Data.DataRowVersion.Current, false, null));
@@ -12674,15 +12674,15 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_кабинета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_кабинета", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Приёмы_врачей` SET `Id_приёма_врача` = ?, `Дата_приёма` = ?, `Время_начала` = ?, `Время_окончания` = ?, `Id_врача` = ?, `Id_кабинета` = ? WHERE ((`Id_приёма_врача` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Приёмы_врачей` SET `Id_приёма` = ?, `Дата_приёма` = ?, `Время_начала` = ?, `Время_окончания` = ?, `Id_врача` = ?, `Id_кабинета` = ? WHERE ((`Id_приёма` = ?) AND ((? = 1 AND `Дата_приёма` IS NULL) OR (`Дата_приёма` = ?)) AND ((? = 1 AND `Время_начала` IS NULL) OR (`Время_начала` = ?)) AND ((? = 1 AND `Время_окончания` IS NULL) OR (`Время_окончания` = ?)) AND ((? = 1 AND `Id_врача` IS NULL) OR (`Id_врача` = ?)) AND ((? = 1 AND `Id_кабинета` IS NULL) OR (`Id_кабинета` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_приёма_врача", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма_врача", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_приёма", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Дата_приёма", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приёма", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Время_начала", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Время_начала", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Время_окончания", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Время_окончания", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_врача", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_врача", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_кабинета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_кабинета", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_приёма_врача", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма_врача", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_приёма", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_приёма", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Дата_приёма", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приёма", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Дата_приёма", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Дата_приёма", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Время_начала", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Время_начала", global::System.Data.DataRowVersion.Original, true, null));
@@ -12708,8 +12708,8 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_приёма_врача, Дата_приёма, Время_начала, Время_окончания, Id_врача, Id_" +
-                "кабинета FROM Приёмы_врачей";
+            this._commandCollection[0].CommandText = "SELECT Id_приёма, Дата_приёма, Время_начала, Время_окончания, Id_врача, Id_кабине" +
+                "та FROM Приёмы_врачей";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12770,8 +12770,8 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id_приёма_врача, global::System.Nullable<global::System.DateTime> Original_Дата_приёма, global::System.Nullable<global::System.DateTime> Original_Время_начала, global::System.Nullable<global::System.DateTime> Original_Время_окончания, int Original_Id_врача, int Original_Id_кабинета) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_приёма_врача));
+        public virtual int Delete(int Original_Id_приёма, global::System.Nullable<global::System.DateTime> Original_Дата_приёма, global::System.Nullable<global::System.DateTime> Original_Время_начала, global::System.Nullable<global::System.DateTime> Original_Время_окончания, int Original_Id_врача, int Original_Id_кабинета) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_приёма));
             if ((Original_Дата_приёма.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Дата_приёма.Value));
@@ -12820,8 +12820,8 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id_приёма_врача, global::System.Nullable<global::System.DateTime> Дата_приёма, global::System.Nullable<global::System.DateTime> Время_начала, global::System.Nullable<global::System.DateTime> Время_окончания, int Id_врача, int Id_кабинета) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id_приёма_врача));
+        public virtual int Insert(int Id_приёма, global::System.Nullable<global::System.DateTime> Дата_приёма, global::System.Nullable<global::System.DateTime> Время_начала, global::System.Nullable<global::System.DateTime> Время_окончания, int Id_врача, int Id_кабинета) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id_приёма));
             if ((Дата_приёма.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Дата_приёма.Value));
             }
@@ -12862,8 +12862,8 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id_приёма_врача, global::System.Nullable<global::System.DateTime> Дата_приёма, global::System.Nullable<global::System.DateTime> Время_начала, global::System.Nullable<global::System.DateTime> Время_окончания, int Id_врача, int Id_кабинета, int Original_Id_приёма_врача, global::System.Nullable<global::System.DateTime> Original_Дата_приёма, global::System.Nullable<global::System.DateTime> Original_Время_начала, global::System.Nullable<global::System.DateTime> Original_Время_окончания, int Original_Id_врача, int Original_Id_кабинета) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id_приёма_врача));
+        public virtual int Update(int Id_приёма, global::System.Nullable<global::System.DateTime> Дата_приёма, global::System.Nullable<global::System.DateTime> Время_начала, global::System.Nullable<global::System.DateTime> Время_окончания, int Id_врача, int Id_кабинета, int Original_Id_приёма, global::System.Nullable<global::System.DateTime> Original_Дата_приёма, global::System.Nullable<global::System.DateTime> Original_Время_начала, global::System.Nullable<global::System.DateTime> Original_Время_окончания, int Original_Id_врача, int Original_Id_кабинета) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id_приёма));
             if ((Дата_приёма.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Дата_приёма.Value));
             }
@@ -12884,7 +12884,7 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Id_врача));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Id_кабинета));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id_приёма_врача));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id_приёма));
             if ((Original_Дата_приёма.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Дата_приёма.Value));
@@ -12933,8 +12933,8 @@ namespace Polyclinic.ПоликлиникаDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Дата_приёма, global::System.Nullable<global::System.DateTime> Время_начала, global::System.Nullable<global::System.DateTime> Время_окончания, int Id_врача, int Id_кабинета, int Original_Id_приёма_врача, global::System.Nullable<global::System.DateTime> Original_Дата_приёма, global::System.Nullable<global::System.DateTime> Original_Время_начала, global::System.Nullable<global::System.DateTime> Original_Время_окончания, int Original_Id_врача, int Original_Id_кабинета) {
-            return this.Update(Original_Id_приёма_врача, Дата_приёма, Время_начала, Время_окончания, Id_врача, Id_кабинета, Original_Id_приёма_врача, Original_Дата_приёма, Original_Время_начала, Original_Время_окончания, Original_Id_врача, Original_Id_кабинета);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Дата_приёма, global::System.Nullable<global::System.DateTime> Время_начала, global::System.Nullable<global::System.DateTime> Время_окончания, int Id_врача, int Id_кабинета, int Original_Id_приёма, global::System.Nullable<global::System.DateTime> Original_Дата_приёма, global::System.Nullable<global::System.DateTime> Original_Время_начала, global::System.Nullable<global::System.DateTime> Original_Время_окончания, int Original_Id_врача, int Original_Id_кабинета) {
+            return this.Update(Original_Id_приёма, Дата_приёма, Время_начала, Время_окончания, Id_врача, Id_кабинета, Original_Id_приёма, Original_Дата_приёма, Original_Время_начала, Original_Время_окончания, Original_Id_врача, Original_Id_кабинета);
         }
     }
     
